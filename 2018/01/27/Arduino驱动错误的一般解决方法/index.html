@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Sat Jan 27 2018 12:00:00 GMT+0900">
-        <meta property="article:modified_time" content="Tue Feb 20 2018 19:20:07 GMT+0900">
+        <meta property="article:modified_time" content="Tue Feb 20 2018 19:23:34 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "https://hanspond.github.io/2018/01/27/Arduino驱动错误的一般解决方法/index.html",
     "headline": "Arduino驱动错误的一般解决方法",
     "datePublished": "Sat Jan 27 2018 12:00:00 GMT+0900",
-    "dateModified": "Tue Feb 20 2018 19:20:07 GMT+0900",
+    "dateModified": "Tue Feb 20 2018 19:23:34 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "$H_P?",
@@ -493,7 +493,7 @@
         <h1 id="Arduino驱动错误的一般解决方法"><a href="#Arduino驱动错误的一般解决方法" class="headerlink" title="Arduino驱动错误的一般解决方法"></a>Arduino驱动错误的一般解决方法</h1><p>Arduino系列和衍生版种类特别多，每个人的电脑配置也不一样。结果是经常板子到家之后，插上电脑发现无法识别。鉴于开发板的性质，退换申诉困难，客服又一般采取不理不睬的态度没有技术支持。</p>
 <p>又能怎么办？只能靠自己呗。</p>
 <p>板子连接电脑没反应，首先打开设备管理器大概是下面这个样子，出现Unknown Device</p>
-<p><img src="Arduino%E9%A9%B1%E5%8A%A8%E9%94%99%E8%AF%AF%E7%9A%84%E4%B8%80%E8%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/1.PNG" alt=""></p>
+<p><img src="1.PNG" alt="Fig 1"></p>
 <p>这时候一般操作是</p>
 <ol>
 <li><p>排除特殊芯片，例如CH340，CP210等芯片，看一下板子是否装了这种芯片，百度搜索下载各自的驱动即可。</p>
@@ -507,7 +507,7 @@
 <li><p>第4步还是出错（一般是code28）的话，有可能是系统确实缺了某些预设的驱动文件。<br>这个时候打开C:\Windows\INF里面的setupapi.dev.log，拖到最下面，找一下前面带！！！符号的几行字</p>
 </li>
 </ol>
-<p><img src="Arduino%E9%A9%B1%E5%8A%A8%E9%94%99%E8%AF%AF%E7%9A%84%E4%B8%80%E8%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/2.PNG" alt=""></p>
+<p><img src="2.PNG" alt="Fig 2"></p>
 <p>例如上图的情况，DFROBOT的CurieNano （Arduino 101）的驱动出错情况<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">!!!  flq:                     Source Media: SPFQOPERATION_ABORT (C:\WINDOWS\System32\DriverStore\FileRepository\usbser.inf_amd64_827db80716f312be\usbser.sys).  </span><br><span class="line">!!!  flq:                     Error 2: The system cannot find the file specified.</span><br></pre></td></tr></table></figure></p>
 <p>意思就是C:\WINDOWS\System32\DriverStore\FileRepository\usbser.inf_amd64_827db80716f312be\usbser.sys这个文件找不到，所以出错了。<br>解决办法就是新建文件夹C:\WINDOWS\System32\DriverStore\FileRepository\usbser.inf_amd64_827db80716f312be，再从其他地方找到usbser.sys复制到这个文件夹，问题解决！QEF!</p>
 <p>每个电脑情况不太一样，具体看setupapi.dev的记录操作即可。</p>
