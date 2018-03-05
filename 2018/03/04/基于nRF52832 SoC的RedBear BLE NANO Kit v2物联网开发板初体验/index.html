@@ -43,6 +43,8 @@
     
     <title>
         
+            基于nRF52832 SoC的RedBear BLE Nano v2物联网开发板初体验 | 
+        
         H_P-&#39;s BLOG
     </title>
 
@@ -52,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",BLE,Bluetooth,Programming,mbed">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -234,14 +236,14 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://hanspond.github.io/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="H_P-&#39;s BLOG">
+    <meta property="og:title" content="基于nRF52832 SoC的RedBear BLE Nano v2物联网开发板初体验 | H_P-&#39;s BLOG">
     <meta property="og:image" content="/img/IMG_1515.jpg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="BLE"> <meta property="og:article:tag" content="Bluetooth"> <meta property="og:article:tag" content="Programming"> <meta property="og:article:tag" content="mbed"> 
 
     
-        <meta property="article:published_time" content="Sun Mar 04 2018 16:44:17 GMT+0900">
-        <meta property="article:modified_time" content="Sun Mar 04 2018 18:55:43 GMT+0900">
+        <meta property="article:published_time" content="Sun Mar 04 2018 19:00:00 GMT+0900">
+        <meta property="article:modified_time" content="Mon Mar 05 2018 22:47:43 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,9 +264,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": "https://hanspond.github.io/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/index.html",
-    "headline": "",
-    "datePublished": "Sun Mar 04 2018 16:44:17 GMT+0900",
-    "dateModified": "Sun Mar 04 2018 18:55:43 GMT+0900",
+    "headline": "基于nRF52832 SoC的RedBear BLE Nano v2物联网开发板初体验",
+    "datePublished": "Sun Mar 04 2018 19:00:00 GMT+0900",
+    "dateModified": "Mon Mar 05 2018 22:47:43 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "$H_P?",
@@ -282,7 +284,7 @@
             "url": "/img/IMG_1515.jpg"
         }
     },
-    "keywords": "",
+    "keywords": ",BLE,Bluetooth,Programming,mbed",
     "description": "",
 }
 </script>
@@ -356,7 +358,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#基于nRF52832-SoC的RedBear-BLE-NANO-Kit-v2物联网开发板初体验"><span class="post-toc-number">1.</span> <span class="post-toc-text">基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#IoT大杀器nRF52832"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">IoT大杀器nRF52832</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RedBear-BLE-Nano-Kit-v2"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">RedBear BLE Nano Kit v2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RedBear-BLE-Nano-Kit-v2开箱"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">RedBear BLE Nano Kit v2开箱</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Arduino-IDE追加库"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Arduino IDE追加库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#BLE-Simple-Chat测试"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">BLE Simple Chat测试</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#并非Arduino风格的BLE语法"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">并非Arduino风格的BLE语法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#诸多参考"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">诸多参考</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#վ-HᴗP-ի"><span class="post-toc-number">2.</span> <span class="post-toc-text">վ HᴗP ի</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#IoT大杀器nRF52832"><span class="post-toc-number">1.</span> <span class="post-toc-text">IoT大杀器nRF52832</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RedBear-BLE-Nano-Kit-v2"><span class="post-toc-number">2.</span> <span class="post-toc-text">RedBear BLE Nano Kit v2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RedBear-BLE-Nano-Kit-v2开箱"><span class="post-toc-number">3.</span> <span class="post-toc-text">RedBear BLE Nano Kit v2开箱</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Arduino-IDE追加库"><span class="post-toc-number">4.</span> <span class="post-toc-text">Arduino IDE追加库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#BLE-Simple-Chat测试"><span class="post-toc-number">5.</span> <span class="post-toc-text">BLE Simple Chat测试</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#并非Arduino风格的BLE语法"><span class="post-toc-number">6.</span> <span class="post-toc-text">并非Arduino风格的BLE语法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#诸多参考"><span class="post-toc-number">7.</span> <span class="post-toc-text">诸多参考</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#վ-HᴗP-ի"><span class="post-toc-number"></span> <span class="post-toc-text">վ HᴗP ի</span></a>
     </ul>
     
 
@@ -388,7 +390,7 @@
         
     
             <p class="article-headline-p">
-                
+                基于nRF52832 SoC的RedBear BLE Nano v2物联网开发板初体验
             </p>
         </div>
 
@@ -437,6 +439,15 @@
 
     <!-- Tags (bookmark) -->
     
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/BLE/">BLE</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Bluetooth/">Bluetooth</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Programming/">Programming</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/mbed/">mbed</a>
+    </ul>
+    
 
     <!-- Share -->
     
@@ -451,7 +462,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&url=https://hanspond.github.io/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/index.html&pic=https://hanspond.github.io/img/favicon/favicon.ico&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=基于nRF52832 SoC的RedBear BLE Nano v2物联网开发板初体验&url=https://hanspond.github.io/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/index.html&pic=https://hanspond.github.io/img/favicon/favicon.ico&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -460,7 +471,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=&url=https://hanspond.github.io/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/index.html&via=$H_P?" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=基于nRF52832 SoC的RedBear BLE Nano v2物联网开发板初体验&url=https://hanspond.github.io/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/index.html&via=$H_P?" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -481,7 +492,7 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://hanspond.github.io/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/index.html&title=" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://hanspond.github.io/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/index.html&title=基于nRF52832 SoC的RedBear BLE Nano v2物联网开发板初体验" target="_blank">
             <li class="mdl-menu__item">
                 Share to LinkedIn
             </li>
@@ -490,7 +501,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=H_P-&#39;s BLOG&title=&summary=&pics=https://hanspond.github.io/img/favicon/favicon.ico&url=https://hanspond.github.io/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=H_P-&#39;s BLOG&title=基于nRF52832 SoC的RedBear BLE Nano v2物联网开发板初体验&summary=&pics=https://hanspond.github.io/img/favicon/favicon.ico&url=https://hanspond.github.io/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to QQ
             </li>
@@ -499,7 +510,7 @@
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://hanspond.github.io/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/index.html&text=" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://hanspond.github.io/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/index.html&text=基于nRF52832 SoC的RedBear BLE Nano v2物联网开发板初体验" target="_blank">
             <li class="mdl-menu__item">
                 Share to Telegram
             </li>
@@ -515,8 +526,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="基于nRF52832-SoC的RedBear-BLE-NANO-Kit-v2物联网开发板初体验"><a href="#基于nRF52832-SoC的RedBear-BLE-NANO-Kit-v2物联网开发板初体验" class="headerlink" title="基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验"></a>基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验</h1><p>#Maker/Arduino##WiCom/BLE##Wicom/IoT##blog/zhihu##blog/github##blog/csdn##Maker/mbed#</p>
-<h2 id="IoT大杀器nRF52832"><a href="#IoT大杀器nRF52832" class="headerlink" title="IoT大杀器nRF52832"></a>IoT大杀器nRF52832</h2><p><img src="/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/nRF52832.png" alt=""></p>
+        <h2 id="IoT大杀器nRF52832"><a href="#IoT大杀器nRF52832" class="headerlink" title="IoT大杀器nRF52832"></a>IoT大杀器nRF52832</h2><p><img src="/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/nRF52832.png" alt=""></p>
 <p>nRF52832 SoC芯片主要参数：</p>
 <ul>
 <li>ARM Cortex-M4，32-bit </li>
@@ -528,7 +538,7 @@
 </ul>
 <p>相比之下Arduino Uno的ATmega328芯片的主频才16MHz，Flash 32kB，SRAM 2kB，不带任何无线功能。对比强烈。</p>
 <p>Nordic的官方组件评测可以看：<br><a href="http://www.sohu.com/a/127214173_464086" target="_blank" rel="noopener">一款基于Cortex-M4的BLE SoC——Nordic nRF52开发套件评测<em>搜狐科技</em>搜狐网</a><br>Arduino也推出了Primo这个板子：<br><a href="http://www.eefocus.com/communication/m/362500" target="_blank" rel="noopener">Arduino使用Nordic nRF52832 SoC的Arduino Primo基板-通信/网络-与非网</a></p>
-<h2 id="RedBear-BLE-Nano-Kit-v2"><a href="#RedBear-BLE-Nano-Kit-v2" class="headerlink" title="RedBear BLE Nano Kit v2"></a>RedBear BLE Nano Kit v2</h2><p>这次入手的是RedBear推出的超小型开发板。小巧全能就是王道！<br><img src="/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/Nano2.png" alt=""></p>
+<h2 id="RedBear-BLE-Nano-Kit-v2"><a href="#RedBear-BLE-Nano-Kit-v2" class="headerlink" title="RedBear BLE Nano Kit v2"></a>RedBear BLE Nano Kit v2</h2><p>入手的是RedBear推出的超小型开发板。小巧全能就是王道！<br>这个板子虽然是某香港/深圳公司做的，中文世界的介绍几乎没有，RedBear的人看到此文不介意给本人支付广告费(@HᴗP@)。<br><img src="/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/Nano2.png" alt=""></p>
 <p>nRF52832的特性之外，还有：</p>
 <ul>
 <li>Arduino IDE，Mbed，JavaScript，Nordic nRF52 SDK，Python，Apache Mynewt，FreeRTOS等开发环境</li>
@@ -868,7 +878,7 @@ void loop() {
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Maker/">Maker<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/">Programming<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/HID/">HID<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Maker/">Maker<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Maker/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/">Programming<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/HID/">HID<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
