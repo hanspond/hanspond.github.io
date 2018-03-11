@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",MacOS,BLE,Swift,Bluetooth,App Development,Programming">
+    <meta name="keywords" content=",MacOS,Swift,App Development,Programming,BLE,Bluetooth">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -239,11 +239,11 @@
     <meta property="og:title" content="MacOS上 Bluetooth Low Energy/BLE 应用的Swift语言开发笔记 | H_P-&#39;s BLOG">
     <meta property="og:image" content="/img/IMG_1515.jpg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="MacOS"> <meta property="og:article:tag" content="BLE"> <meta property="og:article:tag" content="Swift"> <meta property="og:article:tag" content="Bluetooth"> <meta property="og:article:tag" content="App Development"> <meta property="og:article:tag" content="Programming"> 
+    <meta property="og:article:tag" content="MacOS"> <meta property="og:article:tag" content="Swift"> <meta property="og:article:tag" content="App Development"> <meta property="og:article:tag" content="Programming"> <meta property="og:article:tag" content="BLE"> <meta property="og:article:tag" content="Bluetooth"> 
 
     
         <meta property="article:published_time" content="Fri Feb 16 2018 12:00:00 GMT+0900">
-        <meta property="article:modified_time" content="Sun Mar 04 2018 19:04:25 GMT+0900">
+        <meta property="article:modified_time" content="Fri Mar 09 2018 20:54:33 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -266,7 +266,7 @@
     "mainEntityOfPage": "https://hanspond.github.io/2018/02/16/MacOS上BLE应用的Swift语言开发笔记/index.html",
     "headline": "MacOS上 Bluetooth Low Energy/BLE 应用的Swift语言开发笔记",
     "datePublished": "Fri Feb 16 2018 12:00:00 GMT+0900",
-    "dateModified": "Sun Mar 04 2018 19:04:25 GMT+0900",
+    "dateModified": "Fri Mar 09 2018 20:54:33 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "$H_P?",
@@ -284,7 +284,7 @@
             "url": "/img/IMG_1515.jpg"
         }
     },
-    "keywords": ",MacOS,BLE,Swift,Bluetooth,App Development,Programming",
+    "keywords": ",MacOS,Swift,App Development,Programming,BLE,Bluetooth",
     "description": "",
 }
 </script>
@@ -549,7 +549,7 @@
 <li>饼干架(Heart Rate Sensor Location, Value, UUID=0x2A38 传感器位置)</li>
 </ul>
 <p>例如，你想买牛奶巧克力，那就先要跑去零食区（UUID=0x180D），然后找到巧克力货架（UUID=0x2A37），et Voila!</p>
-<p>这个Services和Characteristics都是用UUID来标记，都是约定俗成的，只能跑去看GATT里面的定义，不支持自定义。<br>-（当然有人会问那你想搞个没有定义或者不符合定义的数据的通讯怎么办呢？有个做法是挂羊头卖狗肉，当然Central和Peripheral两头设定都要对得上。）-</p>
+<p>这个Services和Characteristics都是用UUID来标记，都是约定俗成的，只能跑去看GATT里面的定义。<br>也可以自行生成UUID：<a href="https://www.uuidgenerator.net" target="_blank" rel="noopener">Online UUID Generator</a><br>-（当然有人会问那你想搞个没有定义或者不符合定义的数据的通讯怎么办呢？有个做法是挂羊头卖狗肉，当然Central和Peripheral两头设定都要对得上。）-</p>
 <h3 id="3-2-Central和Peripheral"><a href="#3-2-Central和Peripheral" class="headerlink" title="3.2 Central和Peripheral"></a>3.2 Central和Peripheral</h3><p>一般来说Central是读取信息的一方，Peripheral是提供信息的一方现在的情况的话电脑是Central了。<br><img src="/2018/02/16/MacOS上BLE应用的Swift语言开发笔记/CBDevices1_2x.png" alt="Fig 3"></p>
 <h3 id="3-3-比较有用的测试道具"><a href="#3-3-比较有用的测试道具" class="headerlink" title="3.3 比较有用的测试道具"></a>3.3 比较有用的测试道具</h3><p>Mac上面有两个道具比较有用：LightBlue和PacketLogger<br><img src="/2018/02/16/MacOS上BLE应用的Swift语言开发笔记/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f343139342f39613833633663392d323032332d316434652d363438622d6666333866313939613732382e706e67.png" alt="Fig 4"><br><img src="/2018/02/16/MacOS上BLE应用的Swift语言开发笔记/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f343139342f30323735323234632d376238652d626432622d623333662d3435306230326639666634642e706e67.png" alt="Fig 5"></p>
 <p>iOS上面有：LightBlue，nRF Connect，nRF Toolbox</p>
