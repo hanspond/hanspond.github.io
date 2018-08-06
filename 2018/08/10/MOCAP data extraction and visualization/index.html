@@ -43,7 +43,7 @@
     
     <title>
         
-            直观图解OFDM原理 | 
+            MOCAP data extraction and visualization | 
         
         H_P-&#39;s BLOG
     </title>
@@ -236,14 +236,14 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="直观图解OFDM原理 | H_P-&#39;s BLOG">
+    <meta property="og:title" content="MOCAP data extraction and visualization | H_P-&#39;s BLOG">
     <meta property="og:image" content="/img/IMG_1515.jpg">
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="Programming"> <meta property="og:article:tag" content="tech"> 
 
     
         <meta property="article:published_time" content="Fri Aug 10 2018 12:00:00 GMT+0900">
-        <meta property="article:modified_time" content="Mon Aug 06 2018 21:44:03 GMT+0900">
+        <meta property="article:modified_time" content="Mon Aug 06 2018 21:51:00 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -264,9 +264,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": "https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html",
-    "headline": "直观图解OFDM原理",
+    "headline": "MOCAP data extraction and visualization",
     "datePublished": "Fri Aug 10 2018 12:00:00 GMT+0900",
-    "dateModified": "Mon Aug 06 2018 21:44:03 GMT+0900",
+    "dateModified": "Mon Aug 06 2018 21:51:00 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "$H_P?",
@@ -358,7 +358,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#MOCAP-data-extraction-and-visualization"><span class="post-toc-number">1.</span> <span class="post-toc-text">MOCAP data extraction and visualization</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Motion-Capture-Technology"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Motion Capture Technology</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview-to-CMU-MOCAP-Database"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Overview to CMU MOCAP Database</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#asf-amc-file-format"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">.asf/.amc file format</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#asf-for-skeleton"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">.asf for skeleton</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#amc-for-motion"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">.amc for motion</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Interpretation"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">Interpretation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Other-useful-references"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">Other useful references</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MOCAP-TOOLBOX"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">MOCAP TOOLBOX</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#վ-HᴗP-ի"><span class="post-toc-number">2.</span> <span class="post-toc-text">վ HᴗP ի</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Motion-Capture-Technology"><span class="post-toc-number">1.</span> <span class="post-toc-text">Motion Capture Technology</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview-to-CMU-MOCAP-Database"><span class="post-toc-number">2.</span> <span class="post-toc-text">Overview to CMU MOCAP Database</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#asf-amc-file-format"><span class="post-toc-number">3.</span> <span class="post-toc-text">.asf/.amc file format</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#asf-for-skeleton"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">.asf for skeleton</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#amc-for-motion"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">.amc for motion</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Interpretation"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Interpretation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Other-useful-references"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">Other useful references</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MOCAP-TOOLBOX"><span class="post-toc-number">4.</span> <span class="post-toc-text">MOCAP TOOLBOX</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#վ-HᴗP-ի"><span class="post-toc-number"></span> <span class="post-toc-text">վ HᴗP ի</span></a>
     </ul>
     
 
@@ -390,7 +390,7 @@
         
     
             <p class="article-headline-p">
-                直观图解OFDM原理
+                MOCAP data extraction and visualization
             </p>
         </div>
 
@@ -462,7 +462,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=直观图解OFDM原理&url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html&pic=https://hanspond.github.io/img/favicon/favicon.ico&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=MOCAP data extraction and visualization&url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html&pic=https://hanspond.github.io/img/favicon/favicon.ico&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -471,7 +471,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=直观图解OFDM原理&url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html&via=$H_P?" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=MOCAP data extraction and visualization&url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html&via=$H_P?" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -492,7 +492,7 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html&title=直观图解OFDM原理" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html&title=MOCAP data extraction and visualization" target="_blank">
             <li class="mdl-menu__item">
                 Share to LinkedIn
             </li>
@@ -501,7 +501,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=H_P-&#39;s BLOG&title=直观图解OFDM原理&summary=&pics=https://hanspond.github.io/img/favicon/favicon.ico&url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=H_P-&#39;s BLOG&title=MOCAP data extraction and visualization&summary=&pics=https://hanspond.github.io/img/favicon/favicon.ico&url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to QQ
             </li>
@@ -510,7 +510,7 @@
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html&text=直观图解OFDM原理" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html&text=MOCAP data extraction and visualization" target="_blank">
             <li class="mdl-menu__item">
                 Share to Telegram
             </li>
@@ -526,7 +526,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="MOCAP-data-extraction-and-visualization"><a href="#MOCAP-data-extraction-and-visualization" class="headerlink" title="MOCAP data extraction and visualization"></a>MOCAP data extraction and visualization</h1><h2 id="Motion-Capture-Technology"><a href="#Motion-Capture-Technology" class="headerlink" title="Motion Capture Technology"></a>Motion Capture Technology</h2><p>Short for MOCAP, this is used to record the movement of objects or, mainly people. The recorded data can be further utilized for other purpose in military, entertainment, sports, medical applications, also for creation and validation of computer vision and robotics.</p>
+        <h2 id="Motion-Capture-Technology"><a href="#Motion-Capture-Technology" class="headerlink" title="Motion Capture Technology"></a>Motion Capture Technology</h2><p>Short for MOCAP, this is used to record the movement of objects or, mainly people. The recorded data can be further utilized for other purpose in military, entertainment, sports, medical applications, also for creation and validation of computer vision and robotics.</p>
 <h2 id="Overview-to-CMU-MOCAP-Database"><a href="#Overview-to-CMU-MOCAP-Database" class="headerlink" title="Overview to CMU MOCAP Database"></a>Overview to CMU MOCAP Database</h2><p><a href="http://mocap.cs.cmu.edu/" target="_blank" rel="noopener">http://mocap.cs.cmu.edu/</a></p>
 <p>This is a famous motion dataset created by Carnegie Mellon University Graphics Lab.</p>
 <p>It contains 2605 trials of motions in 6 categories and 23 subcategories by 111 human subjects. Humans wear a suit with 41 markers which can be captured with 12 Vicon infrared MX-40 cameras, each of which is capable of recording 120 Hz with images of 4 megapixel resolution.</p>
@@ -681,9 +681,9 @@ lowerback 2.29991 -0.349181 1.09181
 </code></pre>
 <p>Be aware that this matlab code was written more than a decade ago and it uses an obselete function of <strong>getline</strong> which will cause problems if run in a newer version of matlab. The solution is to switch to another function of <strong>fgetl</strong>.</p>
 <p>Modified version: <a href="https://github.com/hanspond/mocap" target="_blank" rel="noopener">https://github.com/hanspond/mocap</a></p>
-<p>Visualization of subject 02 motion 02<br><img src="/2018/08/10/MOCAP data extraction and visualization/ezgif.com-gif-maker%20(2" alt="">.gif)</p>
+<p>Visualization of subject 02 motion 02<br><img src="/2018/08/10/MOCAP data extraction and visualization/skel.gif" alt=""></p>
 <p>Visualization of subject 02 motion 02 with a ellipsoidal model</p>
-<p><img src="/2018/08/10/MOCAP data extraction and visualization/ezgif.com-gif-maker.gif" alt=""></p>
+<p><img src="/2018/08/10/MOCAP data extraction and visualization/ellipsoid.gif" alt=""></p>
 <p>Others tool:</p>
 <p><a href="https://github.com/CalciferZh/AMCParser" target="_blank" rel="noopener">https://github.com/CalciferZh/AMCParser</a><br><a href="https://github.com/CalciferZh/SMPL" target="_blank" rel="noopener">https://github.com/CalciferZh/SMPL</a><br><a href="https://github.com/surenkum/c3d_to_xyz" target="_blank" rel="noopener">https://github.com/surenkum/c3d_to_xyz</a><br><a href="https://github.com/CalciferZh/CMU-MoCap-Washer" target="_blank" rel="noopener">https://github.com/CalciferZh/CMU-MoCap-Washer</a></p>
 <p>A list to other MOCAP databases:<br><a href="http://www.jeroenvanboxtel.com/MocapDatabases.html" target="_blank" rel="noopener">http://www.jeroenvanboxtel.com/MocapDatabases.html</a></p>
