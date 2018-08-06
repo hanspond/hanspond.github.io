@@ -43,7 +43,7 @@
     
     <title>
         
-            timeline | 
+            直观图解OFDM原理 | 
         
         H_P-&#39;s BLOG
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Programming,tech">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -81,6 +81,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -212,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="H_P-&#39;s BLOG">
-    <meta name="msapplication-starturl" content="https://hanspond.github.io/timeline/">
+    <meta name="msapplication-starturl" content="https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="H_P-&#39;s BLOG">
@@ -231,13 +234,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://hanspond.github.io/timeline/">
+    <meta property="og:url" content="https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="timeline | H_P-&#39;s BLOG">
+    <meta property="og:title" content="直观图解OFDM原理 | H_P-&#39;s BLOG">
     <meta property="og:image" content="/img/IMG_1515.jpg">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Programming"> <meta property="og:article:tag" content="tech"> 
 
+    
+        <meta property="article:published_time" content="Fri Aug 10 2018 12:00:00 GMT+0900">
+        <meta property="article:modified_time" content="Mon Aug 06 2018 21:44:03 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -245,13 +251,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://hanspond.github.io/timeline/index.html" />
+        <link rel="canonical" href="https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html",
+    "headline": "直观图解OFDM原理",
+    "datePublished": "Fri Aug 10 2018 12:00:00 GMT+0900",
+    "dateModified": "Mon Aug 06 2018 21:44:03 GMT+0900",
+    "author": {
+        "@type": "Person",
+        "name": "$H_P?",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/IMG_1515.jpg"
+        },
+        "description": "Non cogito ergo sum,Alea iacta est,Audi, vide, tace,Horam Periit"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "H_P-&#39;s BLOG",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/IMG_1515.jpg"
+        }
+    },
+    "keywords": ",Programming,tech",
+    "description": "",
+}
+</script>
 
 
     
@@ -295,588 +331,439 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#MOCAP-data-extraction-and-visualization"><span class="post-toc-number">1.</span> <span class="post-toc-text">MOCAP data extraction and visualization</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Motion-Capture-Technology"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Motion Capture Technology</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview-to-CMU-MOCAP-Database"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Overview to CMU MOCAP Database</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#asf-amc-file-format"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">.asf/.amc file format</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#asf-for-skeleton"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">.asf for skeleton</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#amc-for-motion"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">.amc for motion</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Interpretation"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">Interpretation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Other-useful-references"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">Other useful references</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MOCAP-TOOLBOX"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">MOCAP TOOLBOX</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#վ-HᴗP-ի"><span class="post-toc-number">2.</span> <span class="post-toc-text">վ HᴗP ի</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
-    <!-- Single Timeline Page -->
-    <style>
-	.md-container {
-		width: 90%;
-		max-width: 1170px;
-		margin: 0 auto;
-	}
-	.md-container::after {
-		content: '';
-		display: table;
-		clear: both;
-	}
-	#md-timeline {
-		position: relative;
-		padding: 2em 0;
-		margin-top: 2em;
-		margin-bottom: 2em;
-	}
-	@media screen and (max-device-width:480px){
-		#md-timeline {
-			margin-top: 6em;
-		}
-	}
-	#md-timeline::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 18px;
-		height: 100%;
-		width: 2px;
-		background: #d7e4ed;
-	}
-	.md-timeline-title {
-		font-size: 20px;
-		line-height: 24px;
-	}
-	.md-timeline-content a {
-		text-decoration: none;
-	}
-	.md-timeline-info {
-		height: 20px;
-		width: 100%;
-		margin: 10px 0px;
-	}
-	.md-timeline-info-span {
-		float: right;
-		margin-right: 10px;
-		text-align: right;
-	}
-	.md-timeline-excerpt {
-	    	clear: right; 
-	}
-	@media only screen and (min-width: 1170px) {
-		#md-timeline {
-			margin-top: 3em;
-			margin-bottom: 3em;
-		}
-		#md-timeline::before {
-			left: 50%;
-			margin-left: -2px;
-		}
-	}
-	.md-timeline-block {
-		position: relative;
-		margin: 2em 0;
-	}
-	.md-timeline-block:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-	.md-timeline-block:first-child {
-		margin-top: 0;
-	}
-	.md-timeline-block:last-child {
-		margin-bottom: 0;
-	}
-	@media only screen and (min-width: 1170px) {
-		.md-timeline-block {
-			margin: 4em 0;
-		}
-		.md-timeline-block:first-child {
-			margin-top: 0;
-		}
-		.md-timeline-block:last-child {
-			margin-bottom: 0;
-		}
-	}
-	.md-timeline-date {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 60px;
-		height: 40px;
-		border-radius: box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-	}
-	.md-timeline-date.blue {
-		background: #0D395F;
-		-webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-		-moz-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-		box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-	}
-	@media only screen and (min-width: 1170px) {
-		.md-timeline-date {
-			width: 60px;
-			height: 60px;
-			left: 50%;
-			margin-left: -30px;
-			/* Force Hardware Acceleration in WebKit */
-			-webkit-transform: translateZ(0);
-			-webkit-backface-visibility: hidden;
-		}
-		.cssanimations .md-timeline-date.is-hidden {
-			visibility: hidden;
-		}
-		.cssanimations .md-timeline-date.bounce-in {
-			visibility: visible;
-			-webkit-animation: md-bounce-1 0.6s;
-			-moz-animation: md-bounce-1 0.6s;
-			animation: md-bounce-1 0.6s;
-		}
-	}
-	@-webkit-keyframes md-bounce-1 {
-		0% {
-			opacity: 0;
-			-webkit-transform: scale(0.5);
-		}
-		60% {
-			opacity: 1;
-			-webkit-transform: scale(1.2);
-		}
-		100% {
-			-webkit-transform: scale(1);
-		}
-	}
-	@-moz-keyframes md-bounce-1 {
-		0% {
-			opacity: 0;
-			-moz-transform: scale(0.5);
-		}
-		60% {
-			opacity: 1;
-			-moz-transform: scale(1.2);
-		}
-		100% {
-			-moz-transform: scale(1);
-		}
-	}
-	@keyframes md-bounce-1 {
-		0% {
-			opacity: 0;
-			-webkit-transform: scale(0.5);
-			-moz-transform: scale(0.5);
-			-ms-transform: scale(0.5);
-			-o-transform: scale(0.5);
-			transform: scale(0.5);
-		}
-		60% {
-			opacity: 1;
-			-webkit-transform: scale(1.2);
-			-moz-transform: scale(1.2);
-			-ms-transform: scale(1.2);
-			-o-transform: scale(1.2);
-			transform: scale(1.2);
-		}
-		100% {
-			-webkit-transform: scale(1);
-			-moz-transform: scale(1);
-			-ms-transform: scale(1);
-			-o-transform: scale(1);
-			transform: scale(1);
-		}
-	}
-	.md-timeline-content {
-		position: relative;
-		margin-left: 60px;
-		background: white;
-		padding: 1em;
-		-webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-		-moz-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-		box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-	}
-	.md-timeline-content:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-	.md-timeline-content h2 {
-		color: #303e49;
-	}
-	.md-timeline-content p, .md-timeline-content .md-read-more, .md-timeline-content .md-date {
-		font-size: 13px;
-		font-size: 0.8125rem;
-	}
-	.md-timeline-content .md-read-more, .md-timeline-content .md-date {
-		display: inline-block;
-	}
-	.md-timeline-content p {
-		margin: 1em 0;
-		line-height: 1.6;
-	}
-	.md-timeline-content .md-read-more {
-		float: right;
-		padding: .8em 1em;
-		background: #acb7c0;
-		color: white;
-		border-radius: 0.25em;
-	}
-	.md-date {
-		color: white;
-		text-align: center;
-	}
-	.no-touch .md-timeline-content .md-read-more:hover {
-		background-color: #bac4cb;
-	}
-	.md-timeline-content::before {
-		content: '';
-		position: absolute;
-		top: 16px;
-		right: 100%;
-		height: 0;
-		width: 0;
-		border: 7px solid transparent;
-		border-right: 7px solid white;
-	}
-	@media only screen and (min-width: 768px) {
-		.md-timeline-content h2 {
-			font-size: 20px;
-			font-size: 1.25rem;
-		}
-		.md-timeline-content p {
-			font-size: 16px;
-			font-size: 1rem;
-		}
-		.md-timeline-content .md-read-more {
-			font-size: 14px;
-			font-size: 0.875rem;
-		}
-	}
-	@media only screen and (min-width: 1170px) {
-		.md-date {
-			text-align: center;
-			margin-top: 10px;
-			line-height: 20px;
-		}
-		.md-timeline-content {
-			margin-left: 0;
-			padding: 1.6em;
-			width: 45%;
-		}
-		.md-timeline-content::before {
-			top: 24px;
-			left: 100%;
-			border-color: transparent;
-			border-left-color: white;
-		}
-		.md-timeline-content .md-read-more {
-			float: left;
-		}
-		.md-timeline-block:nth-child(even) .md-timeline-content {
-			float: right;
-		}
-		.md-timeline-block:nth-child(even) .md-timeline-content::before {
-			top: 24px;
-			left: auto;
-			right: 100%;
-			border-color: transparent;
-			border-right-color: white;
-		}
-		.md-timeline-block:nth-child(even) .md-timeline-content .md-read-more {
-			float: right;
-		}
-		.cssanimations .md-timeline-content.is-hidden {
-			visibility: hidden;
-		}
-		.cssanimations .md-timeline-content.bounce-in {
-			visibility: visible;
-			-webkit-animation: md-bounce-2 0.6s;
-			-moz-animation: md-bounce-2 0.6s;
-			animation: md-bounce-2 0.6s;
-		}
-	}
-	@media only screen and (min-width: 1170px) {
-		/* inverse bounce effect on even content blocks */
-		.cssanimations .md-timeline-block:nth-child(even) .md-timeline-content.bounce-in {
-			-webkit-animation: md-bounce-2-inverse 0.6s;
-			-moz-animation: md-bounce-2-inverse 0.6s;
-			animation: md-bounce-2-inverse 0.6s;
-		}
-	}
-	@-webkit-keyframes md-bounce-2 {
-		0% {
-			opacity: 0;
-			-webkit-transform: translateX(-100px);
-		}
-		60% {
-			opacity: 1;
-			-webkit-transform: translateX(20px);
-		}
-		100% {
-			-webkit-transform: translateX(0);
-		}
-	}
-	@-moz-keyframes md-bounce-2 {
-		0% {
-			opacity: 0;
-			-moz-transform: translateX(-100px);
-		}
-		60% {
-			opacity: 1;
-			-moz-transform: translateX(20px);
-		}
-		100% {
-			-moz-transform: translateX(0);
-		}
-	}
-	@keyframes md-bounce-2 {
-		0% {
-			opacity: 0;
-			-webkit-transform: translateX(-100px);
-			-moz-transform: translateX(-100px);
-			-ms-transform: translateX(-100px);
-			-o-transform: translateX(-100px);
-			transform: translateX(-100px);
-		}
-		60% {
-			opacity: 1;
-			-webkit-transform: translateX(20px);
-			-moz-transform: translateX(20px);
-			-ms-transform: translateX(20px);
-			-o-transform: translateX(20px);
-			transform: translateX(20px);
-		}
-		100% {
-			-webkit-transform: translateX(0);
-			-moz-transform: translateX(0);
-			-ms-transform: translateX(0);
-			-o-transform: translateX(0);
-			transform: translateX(0);
-		}
-	}
-	@-webkit-keyframes md-bounce-2-inverse {
-		0% {
-			opacity: 0;
-			-webkit-transform: translateX(100px);
-		}
-		60% {
-			opacity: 1;
-			-webkit-transform: translateX(-20px);
-		}
-		100% {
-			-webkit-transform: translateX(0);
-		}
-	}
-	@-moz-keyframes md-bounce-2-inverse {
-		0% {
-			opacity: 0;
-			-moz-transform: translateX(100px);
-		}
-		60% {
-			opacity: 1;
-			-moz-transform: translateX(-20px);
-		}
-		100% {
-			-moz-transform: translateX(0);
-		}
-	}
-	@keyframes md-bounce-2-inverse {
-		0% {
-			opacity: 0;
-			-webkit-transform: translateX(100px);
-			-moz-transform: translateX(100px);
-			-ms-transform: translateX(100px);
-			-o-transform: translateX(100px);
-			transform: translateX(100px);
-		}
-		60% {
-			opacity: 1;
-			-webkit-transform: translateX(-20px);
-			-moz-transform: translateX(-20px);
-			-ms-transform: translateX(-20px);
-			-o-transform: translateX(-20px);
-			transform: translateX(-20px);
-		}
-		100% {
-			-webkit-transform: translateX(0);
-			-moz-transform: translateX(0);
-			-ms-transform: translateX(0);
-			-o-transform: translateX(0);
-			transform: translateX(0);
-		}
-	}
-</style>
+    <!-- Post Module -->
+    <div class="material-post_container">
 
-<section id="md-timeline" class="md-container">
-   	   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">Aug 10 2018</div>
-                		</div>
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/2018/08/10/MOCAP data extraction and visualization/">直观图解OFDM原理</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/categories/Computer-Vision/">Computer Vision</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/tags/Programming/">Programming</a>, <a class="tag-link" href="/tags/tech/">tech</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">Jun 09 2018</div>
-                		</div>
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 28 + 1);
 
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/2018/06/09/直观图解OFDM原理/">直观图解OFDM原理</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/categories/Wireless-Communication/">Wireless Communication</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/tags/Programming/">Programming</a>, <a class="tag-link" href="/tags/Python/">Python</a>, <a class="tag-link" href="/tags/tech/">tech</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							介绍人生如幻，不知...
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">Mar 04 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/2018/03/04/基于nRF52832 SoC的RedBear BLE NANO Kit v2物联网开发板初体验/">基于nRF52832 SoC的RedBear BLE Nano v2物联网开发板初体验</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/categories/Maker/">Maker</a>, <a class="category-link" href="/categories/Maker/Wireless-Communication/">Wireless Communication</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/tags/BLE/">BLE</a>, <a class="tag-link" href="/tags/Bluetooth/">Bluetooth</a>, <a class="tag-link" href="/tags/Programming/">Programming</a>, <a class="tag-link" href="/tags/mbed/">mbed</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">Feb 21 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/2018/02/21/MacOS上键盘鼠标控制应用的Swift语言开发笔记/">MacOS上键盘/鼠标控制应用的Swift语言开发笔记</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/categories/Programming/">Programming</a>, <a class="category-link" href="/categories/Programming/HID/">HID</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/tags/App-Development/">App Development</a>, <a class="tag-link" href="/tags/HID/">HID</a>, <a class="tag-link" href="/tags/MacOS/">MacOS</a>, <a class="tag-link" href="/tags/Programming/">Programming</a>, <a class="tag-link" href="/tags/Swift/">Swift</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">Feb 16 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/2018/02/16/MacOS上BLE应用的Swift语言开发笔记/">MacOS上 Bluetooth Low Energy/BLE 应用的Swift语言开发笔记</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/categories/Programming/">Programming</a>, <a class="category-link" href="/categories/Programming/Wireless-Communication/">Wireless Communication</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/tags/App-Development/">App Development</a>, <a class="tag-link" href="/tags/BLE/">BLE</a>, <a class="tag-link" href="/tags/Bluetooth/">Bluetooth</a>, <a class="tag-link" href="/tags/MacOS/">MacOS</a>, <a class="tag-link" href="/tags/Programming/">Programming</a>, <a class="tag-link" href="/tags/Swift/">Swift</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							1. 背景...
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">Feb 15 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/2018/02/15/hello-world/">Hello World</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							Welcome to Hexo
-						...
-					</p>
-                    		</div>
-			</div>	
-   		
-			<div class="md-timeline-block">
-                		<div class="md-timeline-date blue">
-                   			<div class="md-date">Jan 27 2018</div>
-                		</div>
-
-                		<div class="md-timeline-content">
-                    			<div class="md-timeline-title"><a href="/2018/01/27/Arduino驱动错误的一般解决方法/">Arduino驱动错误的一般解决方法</a></div>
-					<div class="md-timeline-info">
-						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/categories/Maker/">Maker</a>
-						</span>
-						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/tags/Arduino/">Arduino</a>, <a class="tag-link" href="/tags/MacOS/">MacOS</a>, <a class="tag-link" href="/tags/Windows/">Windows</a>, <a class="tag-link" href="/tags/debug/">debug</a>, <a class="tag-link" href="/tags/driver/">driver</a>
-						</span>
-						
-					</div>
-					<p class="md-timeline-excerpt">
-						
-							Arduino系列和衍生版种类特别多，每个人的电脑配置也不一样。结果是经常板子到家之后，插上电脑发现无法识别。鉴于开发板的性质，退换申诉困难，客服又...
-						...
-					</p>
-                    		</div>
-			</div>	
-   			   	  		
-   	</section>
-
-<script type="text/ls-javascript" id="page-timeline-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() )<$(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
-    $(document).ready(function() {
-        adjustFooter();
-    });
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                直观图解OFDM原理
+            </p>
+        </div>
 
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/IMG_1515.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>$H_P?</strong>
+        <span>Aug 10, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">Read this article on other devices</li>
+    
+        <img src="https://chart.googleapis.com/chart?cht=qr&chs=246x246&chl=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/&chld=M|2">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Programming/">Programming</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/tech/">tech</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=直观图解OFDM原理&url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html&pic=https://hanspond.github.io/img/favicon/favicon.ico&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=直观图解OFDM原理&url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html&via=$H_P?" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html&title=直观图解OFDM原理" target="_blank">
+            <li class="mdl-menu__item">
+                Share to LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=H_P-&#39;s BLOG&title=直观图解OFDM原理&summary=&pics=https://hanspond.github.io/img/favicon/favicon.ico&url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/index.html&text=直观图解OFDM原理" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="MOCAP-data-extraction-and-visualization"><a href="#MOCAP-data-extraction-and-visualization" class="headerlink" title="MOCAP data extraction and visualization"></a>MOCAP data extraction and visualization</h1><h2 id="Motion-Capture-Technology"><a href="#Motion-Capture-Technology" class="headerlink" title="Motion Capture Technology"></a>Motion Capture Technology</h2><p>Short for MOCAP, this is used to record the movement of objects or, mainly people. The recorded data can be further utilized for other purpose in military, entertainment, sports, medical applications, also for creation and validation of computer vision and robotics.</p>
+<h2 id="Overview-to-CMU-MOCAP-Database"><a href="#Overview-to-CMU-MOCAP-Database" class="headerlink" title="Overview to CMU MOCAP Database"></a>Overview to CMU MOCAP Database</h2><p><a href="http://mocap.cs.cmu.edu/" target="_blank" rel="noopener">http://mocap.cs.cmu.edu/</a></p>
+<p>This is a famous motion dataset created by Carnegie Mellon University Graphics Lab.</p>
+<p>It contains 2605 trials of motions in 6 categories and 23 subcategories by 111 human subjects. Humans wear a suit with 41 markers which can be captured with 12 Vicon infrared MX-40 cameras, each of which is capable of recording 120 Hz with images of 4 megapixel resolution.</p>
+<p>The 3D data is provided in two way:</p>
+<ul>
+<li>Marker position, in .c3d files format.</li>
+<li>Skeleton movement, in a .vsk<em>.v pair or .asf</em>.amc pair, a .bvh format is also created and provided by other researchers.</li>
+</ul>
+<p>Here we use the original .asf/.amc pair to extract the 3D data and to visualize.</p>
+<h2 id="asf-amc-file-format"><a href="#asf-amc-file-format" class="headerlink" title=".asf/.amc file format"></a>.asf/.amc file format</h2><p>.asf/.amc was created by a game company Acclaim which no longer exist.</p>
+<h3 id="asf-for-skeleton"><a href="#asf-for-skeleton" class="headerlink" title=".asf for skeleton"></a>.asf for skeleton</h3><p>an example of asf file from 01 subject:</p>
+<pre><code># AST/ASF file generated using VICON BodyLanguage
+# -----------------------------------------------
+:version 1.10   // Version of the skeleton definition 
+:name VICON     // Arbitrary name for the skeleton
+:units          // Units definition
+  mass 1.0
+  length 0.45   // In this CMU dataset, all the data are multiplied by 0.45 in *INCHES*
+  angle deg     // Euler angles are in degrees
+:documentation  // Arbitrary documentation
+   .ast/.asf automatically generated from VICON data using
+   VICON BodyBuilder and BodyLanguage model FoxedUp or BRILLIANT.MOD
+
+:root                        // This is the root of the skeleton
+   order TX TY TZ RX RY RZ   // The order of appearence of 6 degrees of freedom in AMC file
+   axis XYZ                  // Rotation order or the root
+   position 0 0 0            // Initial position/offset in World Coodinate System
+   orientation 0 0 0         // Initial orientation in WCS
+
+:bonedata                    // Here starts the definition of each bone segment
+  begin
+     id 1            // Unique id for each bone   
+     name lhipjoint  // Unique name for each bone 
+     direction 0.566809 -0.746272 0.349008  
+     // Vector describing direction of the bone segment from 
+     // parent to child in world coordinate system
+     length 2.40479   // Length of the bone segment
+     // The above direction and length of a segment determine 
+     //the offset of the child from the parent
+     axis 0 0 0  XYZ  // Rotation of local coordinate system for 
+                      //this bone relative to the world coordinate 
+                      //system. In .amc file the rotation angles 
+                      //for this bone for each time frame will be 
+                      //defined relative to this local coordinate 
+                      //system 
+  end
+  begin
+     id 2 
+     name lfemur
+     direction 0.34202 -0.939693 0  
+     length 7.1578  
+     axis 0 0 20  XYZ
+    dof rx ry rz            // Not always 3 degrees of freedom
+    limits (-160.0 20.0)    // Limits of each rotation
+           (-70.0 70.0)
+           (-60.0 70.0)
+  end
+  ...
+  ...
+  ...
+  :hierarchy                
+  // This part defines the hierarchy of each bone
+  // e.g. root is the parent to lhipjoint, rhipjoint and lowerback
+  begin
+    root lhipjoint rhipjoint lowerback
+    lhipjoint lfemur
+    lfemur ltibia
+    ltibia lfoot
+    lfoot ltoes
+    rhipjoint rfemur
+    rfemur rtibia
+    rtibia rfoot
+    rfoot rtoes
+    lowerback upperback
+    upperback thorax
+    thorax lowerneck lclavicle rclavicle
+    lowerneck upperneck
+    upperneck head
+    lclavicle lhumerus
+    lhumerus lradius
+    lradius lwrist
+    lwrist lhand lthumb
+    lhand lfingers
+    rclavicle rhumerus
+    rhumerus rradius
+    rradius rwrist
+    rwrist rhand rthumb
+    rhand rfingers
+  end
+</code></pre><p>Fig 1: Definition of the skeleton</p>
+<p><img src="http://graphics.cs.cmu.edu/nsp/course/15-464/Fall05/assignments/image006.gif" alt="Fig 1"></p>
+<p>Some notes:</p>
+<ul>
+<li>The WCS is originally Y up.</li>
+<li>Euler angles are used</li>
+<li>In the ASF file the order is given left to right so that an order of “XYZ” is: vM = vXYZ</li>
+<li>.amc file records the axis data of each bone frame by frame</li>
+</ul>
+<h3 id="amc-for-motion"><a href="#amc-for-motion" class="headerlink" title=".amc for motion"></a>.amc for motion</h3><pre><code class="python">
+#!OML:ASF H:\Terrain\Patient Classification 1\PLAYGROUND\JustinFriday\JustinFriday.ASF
+:FULLY-SPECIFIED
+:DEGREES
+1   // Frame numbers
+root 9.37216 17.8693 -17.3198 -2.01677 -7.59696 -3.23164
+lowerback 2.30193 -0.395121 1.17299
+upperback 0.0030495 -0.462657 2.70388
+thorax -1.27453 -0.231833 2.13151
+lowerneck -9.32819 -3.76531 -6.70788
+upperneck 27.8377 -3.2335 -3.01318
+head 10.556 -2.55728 -0.318388
+rclavicle 3.64024e-015 -6.75868e-015
+rhumerus -29.5133 -11.7797 -80.4307
+rradius 21.1829
+rwrist -7.55893
+rhand -17.4806 -21.0413
+rfingers 7.12502
+rthumb 8.77158 -50.8391
+lclavicle 3.64024e-015 -6.75868e-015
+lhumerus 17.2039 -14.515 62.7889
+lradius 136.231
+lwrist 10.1195
+lhand -37.631 -17.4438
+lfingers 7.12502
+lthumb -10.6834 12.2646
+rfemur -0.629535 4.65229 22.5467
+rtibia 26.4457
+rfoot -15.2124 -9.97437
+rtoes 3.93605
+lfemur 4.00236 1.20472 -13.8412
+ltibia 20.088
+lfoot -16.1868 6.57726
+ltoes -4.61789
+2
+root 9.37285 17.8666 -17.3192 -2.06376 -7.58832 -3.1009
+lowerback 2.29991 -0.349181 1.09181
+...
+...
+...
+</code></pre>
+<h3 id="Interpretation"><a href="#Interpretation" class="headerlink" title="Interpretation"></a>Interpretation</h3><p>As shown by the data hierarchy, human motions are represented as the translation offset of the root, and the rotation offsets of its child bones. </p>
+<p>To get WCS of a specific bone segment, we must calculate the WCS of its parent, recursively to the root.</p>
+<p>L = CinvMCB</p>
+<h3 id="Other-useful-references"><a href="#Other-useful-references" class="headerlink" title="Other useful references"></a>Other useful references</h3><p><a href="http://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/ASF-AMC.html" target="_blank" rel="noopener">http://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/ASF-AMC.html</a><br><a href="http://graphics.cs.cmu.edu/nsp/course/15-464/Fall05/assignments/StartupCodeDescription.html" target="_blank" rel="noopener">http://graphics.cs.cmu.edu/nsp/course/15-464/Fall05/assignments/StartupCodeDescription.html</a><br><a href="http://web.cse.ohio-state.edu/~parent.1/classes/888/Mocap/index.html" target="_blank" rel="noopener">http://web.cse.ohio-state.edu/~parent.1/classes/888/Mocap/index.html</a><br><a href="http://www.darwin3d.com/gamedev/articles/col0198.pdf" target="_blank" rel="noopener">http://www.darwin3d.com/gamedev/articles/col0198.pdf</a><br><a href="http://mukai-lab.org/content/MotionCaptureDataFile.pdf" target="_blank" rel="noopener">http://mukai-lab.org/content/MotionCaptureDataFile.pdf</a><br><a href="https://blog.csdn.net/zb1165048017/article/details/49358089" target="_blank" rel="noopener">https://blog.csdn.net/zb1165048017/article/details/49358089</a><br><a href="https://blog.csdn.net/zb1165048017/article/details/49339493" target="_blank" rel="noopener">https://blog.csdn.net/zb1165048017/article/details/49339493</a><br><a href="http://studentnet.cs.manchester.ac.uk/resources/library/3rd-year-projects/2016/jiayun.wang.pdf" target="_blank" rel="noopener">http://studentnet.cs.manchester.ac.uk/resources/library/3rd-year-projects/2016/jiayun.wang.pdf</a></p>
+<h2 id="MOCAP-TOOLBOX"><a href="#MOCAP-TOOLBOX" class="headerlink" title="MOCAP TOOLBOX"></a>MOCAP TOOLBOX</h2><p>There are several existing projects available in Github for processing and visualization of the CMU MOCAP .asf/.amc file.</p>
+<p>Here is one used by most researchers:<br><a href="https://github.com/lawrennd/mocap" target="_blank" rel="noopener">https://github.com/lawrennd/mocap</a></p>
+<pre><code class="matlab">&gt;&gt; % Read .asf skeleton file
+&gt;&gt; skel_86 = acclaimReadSkel(&#39;examples/86.asf&#39;);
+&gt;&gt; % Read .amc channels file
+&gt;&gt; [channels_86_10, skel_86] = acclaimLoadChannels(&#39;examples/86_10.amc&#39;, skel);
+&gt;&gt; % Visualize the skeleton in motion
+&gt;&gt; skelPlayData(skel_86, channels_86_10, 1/120);
+</code></pre>
+<p>Be aware that this matlab code was written more than a decade ago and it uses an obselete function of <strong>getline</strong> which will cause problems if run in a newer version of matlab. The solution is to switch to another function of <strong>fgetl</strong>.</p>
+<p>Modified version: <a href="https://github.com/hanspond/mocap" target="_blank" rel="noopener">https://github.com/hanspond/mocap</a></p>
+<p>Visualization of subject 02 motion 02<br><img src="/2018/08/10/MOCAP data extraction and visualization/ezgif.com-gif-maker%20(2" alt="">.gif)</p>
+<p>Visualization of subject 02 motion 02 with a ellipsoidal model</p>
+<p><img src="/2018/08/10/MOCAP data extraction and visualization/ezgif.com-gif-maker.gif" alt=""></p>
+<p>Others tool:</p>
+<p><a href="https://github.com/CalciferZh/AMCParser" target="_blank" rel="noopener">https://github.com/CalciferZh/AMCParser</a><br><a href="https://github.com/CalciferZh/SMPL" target="_blank" rel="noopener">https://github.com/CalciferZh/SMPL</a><br><a href="https://github.com/surenkum/c3d_to_xyz" target="_blank" rel="noopener">https://github.com/surenkum/c3d_to_xyz</a><br><a href="https://github.com/CalciferZh/CMU-MoCap-Washer" target="_blank" rel="noopener">https://github.com/CalciferZh/CMU-MoCap-Washer</a></p>
+<p>A list to other MOCAP databases:<br><a href="http://www.jeroenvanboxtel.com/MocapDatabases.html" target="_blank" rel="noopener">http://www.jeroenvanboxtel.com/MocapDatabases.html</a></p>
+<h1 id="վ-HᴗP-ի"><a href="#վ-HᴗP-ի" class="headerlink" title="վ HᴗP ի"></a>վ HᴗP ի</h1>
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
+                        </strong>
+                        <br>
+                        <strong>Link to this article: </strong><a href="https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/">https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://hanspond.github.io/2018/08/10/MOCAP data extraction and visualization/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//hanspond-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/06/09/直观图解OFDM原理/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
@@ -1070,6 +957,14 @@ It will not impact the appearance and can give developers a lot of support :)
                     
 
                     
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
 
                     <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
@@ -1225,6 +1120,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
 
 
 
@@ -1237,6 +1136,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     
