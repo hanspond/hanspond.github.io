@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Python,Programming,tech,algorithm">
+    <meta name="keywords" content=",Programming,tech,Python,algorithm">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -239,11 +239,11 @@
     <meta property="og:title" content="EM Algorithm 从直观到数学理解 | H_P-&#39;s BLOG">
     <meta property="og:image" content="/img/IMG_1515.jpg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Python"> <meta property="og:article:tag" content="Programming"> <meta property="og:article:tag" content="tech"> <meta property="og:article:tag" content="algorithm"> 
+    <meta property="og:article:tag" content="Programming"> <meta property="og:article:tag" content="tech"> <meta property="og:article:tag" content="Python"> <meta property="og:article:tag" content="algorithm"> 
 
     
         <meta property="article:published_time" content="Sun Sep 02 2018 12:00:00 GMT+0900">
-        <meta property="article:modified_time" content="Sun Sep 02 2018 22:07:00 GMT+0900">
+        <meta property="article:modified_time" content="Sun Sep 02 2018 22:11:10 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -266,7 +266,7 @@
     "mainEntityOfPage": "https://hanspond.github.io/2018/09/02/EM Algorithm 从直观到数学理解/index.html",
     "headline": "EM Algorithm 从直观到数学理解",
     "datePublished": "Sun Sep 02 2018 12:00:00 GMT+0900",
-    "dateModified": "Sun Sep 02 2018 22:07:00 GMT+0900",
+    "dateModified": "Sun Sep 02 2018 22:11:10 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "$H_P?",
@@ -284,7 +284,7 @@
             "url": "/img/IMG_1515.jpg"
         }
     },
-    "keywords": ",Python,Programming,tech,algorithm",
+    "keywords": ",Programming,tech,Python,algorithm",
     "description": "",
 }
 </script>
@@ -527,7 +527,7 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h1 id="0x00-引言"><a href="#0x00-引言" class="headerlink" title="0x00 引言"></a>0x00 引言</h1><p>EM算法是什么？什么是E（Epectation）？什么是M（Maximization）？什么又是公式里面出现的Q函数？这些公式都是怎么推导的？Nature抛硬币的那个图怎么就看不懂嘞？为什么看了那么多文章之后还是不懂？公式的符号怎么又不一样呢？谁谁还说有九层塔？Emmm…interesting</p>
-<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/EM%20Algorithm%20%E4%BB%8E%E7%9B%B4%E8%A7%82%E5%88%B0%E6%95%B0%E5%AD%A6%E7%90%86%E8%A7%A3%20(in%20progress" alt="">%20(notes)/WtYc-hinpmnq5181797.gif)</p>
+<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/WtYc-hinpmnq5181797.gif" alt=""></p>
 <p>下面，让我们走进科学。</p>
 <h1 id="0x10-直观理解"><a href="#0x10-直观理解" class="headerlink" title="0x10 直观理解"></a>0x10 直观理解</h1><p>现在有一个随机变量数据集<code>$\mathbf{D}$</code>，假设我们知道这个随机变量<code>$\mathbf{X}$</code>服从某种分布(一般是高斯正规分布），我们的目的是想知道这个分布的参数<code>$\mathbf{\theta}$</code>，可是随机变量<code>$\mathbf{X}$</code>里面包含不可知的参数（也就是隐变量<code>$\mathbf{z}$</code>）的时候，EM算法是在一边猜隐变量<code>$\mathbf{z}$</code>一边更新<code>$\mathbf{\theta}$</code>：</p>
 <ol>
@@ -540,7 +540,7 @@
 <h1 id="0x20-抛硬币的例子"><a href="#0x20-抛硬币的例子" class="headerlink" title="0x20 抛硬币的例子"></a>0x20 抛硬币的例子</h1><blockquote>
 <p>Do, C. B., &amp; Batzoglou, S. (2008). What is the expectation maximization algorithm? Nature Biotechnology, 26(8), 897–899. <a href="https://doi.org/10.1038/nbt1406" target="_blank" rel="noopener">https://doi.org/10.1038/nbt1406</a>  </p>
 </blockquote>
-<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/EM%20Algorithm%20%E4%BB%8E%E7%9B%B4%E8%A7%82%E5%88%B0%E6%95%B0%E5%AD%A6%E7%90%86%E8%A7%A3%20(in%20progress" alt="硬币图">%20(notes)/v2-a5b47206d802b392e0e72a23c6b7bb95_hd.jpg)</p>
+<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/v2-a5b47206d802b392e0e72a23c6b7bb95_hd.jpg" alt="硬币图"></p>
 <p>上面这篇著名的EM入门论文里面有一张很好的图例，利用抛硬币来说明EM，可是对于某些初学者来讲缺乏解读还是有点难理解思路。</p>
 <p>下面尝试拆解一下分步骤解读</p>
 <h3 id="0x21-问题定义"><a href="#0x21-问题定义" class="headerlink" title="0x21 问题定义"></a>0x21 问题定义</h3><h6 id="已知："><a href="#已知：" class="headerlink" title="已知："></a>已知：</h6><ul>
@@ -553,11 +553,11 @@
 <h6 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h6><ul>
 <li style="list-style: none"><input type="checkbox"> 分别求这两个硬币正面朝上的概率<code>$\theta_{A}$</code>和<code>$\theta_{B}$</code></li>
 </ul>
-<h3 id="0x22-完全信息-vs-包含隐函数的不完全信息"><a href="#0x22-完全信息-vs-包含隐函数的不完全信息" class="headerlink" title="0x22 完全信息 vs 包含隐函数的不完全信息"></a>0x22 完全信息 vs 包含隐函数的不完全信息</h3><p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/EM%20Algorithm%20%E4%BB%8E%E7%9B%B4%E8%A7%82%E5%88%B0%E6%95%B0%E5%AD%A6%E7%90%86%E8%A7%A3%20(in%20progress" alt="完全信息">%20(notes)/1.PNG)</p>
+<h3 id="0x22-完全信息-vs-包含隐函数的不完全信息"><a href="#0x22-完全信息-vs-包含隐函数的不完全信息" class="headerlink" title="0x22 完全信息 vs 包含隐函数的不完全信息"></a>0x22 完全信息 vs 包含隐函数的不完全信息</h3><p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/1.PNG" alt="完全信息"></p>
 <p>上图的实验过程中如果记录了当时抛的是A或者B哪种硬币，统计推断的时候知道了每一组是属于哪一种硬币的情况下那当然很好算，这种情况叫完全信息。</p>
-<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/EM%20Algorithm%20%E4%BB%8E%E7%9B%B4%E8%A7%82%E5%88%B0%E6%95%B0%E5%AD%A6%E7%90%86%E8%A7%A3%20(in%20progress" alt="不完全信息">%20(notes)/2.PNG)</p>
+<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/2.PNG" alt="不完全信息"></p>
 <p>假如实验中根本不知道抛的时候究竟是哪一种硬币，或者就不告诉你的话，我们就没办法直接计算两种硬币正面朝上的概率了，这种情况叫不完全信息。这个时候就用到了EM算法。</p>
-<h3 id="0x23-完全信息下的求解"><a href="#0x23-完全信息下的求解" class="headerlink" title="0x23 完全信息下的求解"></a>0x23 完全信息下的求解</h3><p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/EM%20Algorithm%20%E4%BB%8E%E7%9B%B4%E8%A7%82%E5%88%B0%E6%95%B0%E5%AD%A6%E7%90%86%E8%A7%A3%20(in%20progress" alt="完全信息求概率">%20(notes)/3.png)</p>
+<h3 id="0x23-完全信息下的求解"><a href="#0x23-完全信息下的求解" class="headerlink" title="0x23 完全信息下的求解"></a>0x23 完全信息下的求解</h3><p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/3.png" alt="完全信息求概率"></p>
 <p>每次抛硬币都是独立的，从二项分布的期望公式<code>$E[\mathbf{X}]=np$</code>可以推导出<code>$p=\frac{E[\mathbf{X}]}{n}=\frac{n_{ head}}{n}$</code></p>
 <ul>
 <li><p>[ ] 对于A来说，一共抛了三组共三十次，共24次向上6次向下，那么A硬币朝上的概率是<code>$\hat \theta_{A}=\frac{24}{30}=0.8$</code></p>
@@ -565,7 +565,7 @@
 <li><p>[ ] 对于B来说，一共抛了两组共二十次，共9次向上11次向下，那么B硬币朝上的概率是<code>$\hat \theta_{B}=\frac{9}{30}=0.45$</code></p>
 </li>
 </ul>
-<h3 id="0x24-不完全信息下的初级EM求解"><a href="#0x24-不完全信息下的初级EM求解" class="headerlink" title="0x24 不完全信息下的初级EM求解"></a>0x24 不完全信息下的初级EM求解</h3><p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/EM%20Algorithm%20%E4%BB%8E%E7%9B%B4%E8%A7%82%E5%88%B0%E6%95%B0%E5%AD%A6%E7%90%86%E8%A7%A3%20(in%20progress" alt="不完全信息">%20(notes)/2%202.PNG)</p>
+<h3 id="0x24-不完全信息下的初级EM求解"><a href="#0x24-不完全信息下的初级EM求解" class="headerlink" title="0x24 不完全信息下的初级EM求解"></a>0x24 不完全信息下的初级EM求解</h3><p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/2%202.PNG" alt="不完全信息"></p>
 <p>不完全信息情况呢？我们根本不知道每一组的结果是属于哪种硬币的，没办法用0x24的方法算。这个时候硬币是否属于A的隐变量<code>$z_n$</code>是未知的。</p>
 <p>（硬币的情况来说正常用二分法，<code>$ z_n=  \begin{cases} 1, if  \ coin \ A \\ 0, if   \ coin \ B \end{cases}$</code>，不过下面使用<code>$z_n$</code>代表数据重新分割的时候属于A的比例。）</p>
 <h6 id="那怎么办？"><a href="#那怎么办？" class="headerlink" title="那怎么办？"></a>那怎么办？</h6><p>想一下就发现，一组抛多次，不同硬币的抛出不同结果的概率是相当不同的。比如说：</p>
@@ -578,7 +578,7 @@
 <p>所以说，已知<code>$\theta_{A}$</code>和<code>$\theta_{B}$</code>的话，我们可以通过观察抛出来的结果来推测原来硬币究竟是属于A还是B的！（这个做法叫做最大似然估计）</p>
 <p>可是我们现在不知道<code>$\theta_{A}$</code>和<code>$\theta_{B}$</code>怎么办呢？</p>
 <p>面对这个蛋生鸡还是鸡生蛋的cul-de-sac（死胡同），我们的做法是：先蒙一个！然后再不停互相更新修改。</p>
-<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/EM%20Algorithm%20%E4%BB%8E%E7%9B%B4%E8%A7%82%E5%88%B0%E6%95%B0%E5%AD%A6%E7%90%86%E8%A7%A3%20(in%20progress" alt="不完全信息第二步">%20(notes)/5.png)</p>
+<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/5.png" alt="不完全信息第二步"></p>
 <h6 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h6><p>（1）先给<code>$\theta_{A}$</code>和<code>$\theta_{B}$</code>随便赋值。<br>比如<code>$\theta_{A}^{(0)}=0.60$</code>和<code>$\theta_{B}^{(0)}=0.50$</code>。</p>
 <p>（2）然后算出</p>
 <ul>
@@ -591,7 +591,7 @@
 <li style="list-style: none"><input type="checkbox"> 同理划分给B的比例是<code>$1-z_1=\frac{P(5H5T|\theta_{B}^{(0)})}{P(5H5T|\theta_{A}^{(0)})+P(5H5T|\theta_{B}^{(0)})}\approx0.55$</code></li>
 </ul>
 <p>对其他组也进行推算，得到<code>$z_2\approx0.80$</code>，<code>$z_3\approx0.73$</code>，<code>$z_4\approx0.35$</code>，<code>$z_5\approx0.65$</code></p>
-<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/EM%20Algorithm%20%E4%BB%8E%E7%9B%B4%E8%A7%82%E5%88%B0%E6%95%B0%E5%AD%A6%E7%90%86%E8%A7%A3%20(in%20progress" alt="不完全信息第三步">%20(notes)/6.png)</p>
+<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/6.png" alt="不完全信息第三步"></p>
 <p>（3）接下来得到了新的划分后的数据，可以更新参数了</p>
 <ul>
 <li style="list-style: none"><input type="checkbox"> 对于A来说，一共有21.3次向上8.6次向下，那么A硬币朝上的概率是<code>$\hat \theta_{A}^{(1)}=\frac{21.3}{21.3+8.6}\approx0.71$</code>。</li>
@@ -636,10 +636,10 @@
 <p>以上是M步。</p>
 <h6 id="另一个角度来看"><a href="#另一个角度来看" class="headerlink" title="另一个角度来看"></a>另一个角度来看</h6><p><code>$\begin{aligned} \sum_{k=1}^{m} \log  P(\mathbf{x}^{(k)}|\mathbf{\theta}) &amp; =                         \sum_{k=1}^{m} \sum_{z} q(z^{(k)})\log  \frac{P(\mathbf{x}^{(k)}|\mathbf{\theta})P(z^{(k)}|\mathbf{x}^{(k)},\mathbf{\theta})}{P(z^{(k)}|\mathbf{x}^{(k)},\mathbf{\theta})} \ \ \  \ (6)\\                &amp; = \sum_{k=1}^{m} \sum_{z} q(z^{(k)})\log \frac{P(\mathbf{x}^{(k)},z^{(k)}|\mathbf{\theta})}{P(z^{(k)}|\mathbf{x}^{(k)},\mathbf{\theta})} \ \ \ \ \ \ \ \ \  (7) \\                                         &amp; = \sum_{k=1}^{m}\sum_{z} q(z^{(k)}) \{\log \frac{P(\mathbf{x}^{(k)},z^{(k)}|\mathbf{\theta})}{q(z^{(k)})}- \log\frac{P(z^{(k)}|\mathbf{x}^{(k)},\mathbf{\theta})}{q(z^{(k)})}\} \ \ \  (8) \\                                                               &amp; = \sum_{k=1}^{m}\sum_{z} q(z^{(k)}) \log \frac{P(\mathbf{x}^{(k)},z^{(k)}|\mathbf{\theta})}{q(z^{(k)})}- \sum_{k=1}^{m}\sum_{z} q(z^{(k)}) \log \frac{P(z^{(k)}|\mathbf{x}^{(k)},\mathbf{\theta})}{q(z^{(k)})} \ \ \  (9) \\                                                            &amp; = L(\mathbf{\theta},z)+KL[q(\mathbf{z})|| P(\mathbf{z}|\mathbf{x},\mathbf{\theta})] \ \ \ \ \ \ \ \ \ \ \ \ \ (10)\end{aligned}$</code></p>
 <p>(6)引入了隐函数后，(7)通过条件概率公式变换概率函数，然后就可以得到(10)。这里可以看出，我们是在构造一个隐函数的分布q。因为我们想让似然函数最大，那就是说(10)第二项的KL散度尽可能小，也就是要让构造出来的q尽可能和真实的隐函数分布接近，这时候<code>$q(\mathbf{z})= P(\mathbf{z}|\mathbf{x},\mathbf{\theta})$</code>，KL散度为零。</p>
-<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/EM%20Algorithm%20%E4%BB%8E%E7%9B%B4%E8%A7%82%E5%88%B0%E6%95%B0%E5%AD%A6%E7%90%86%E8%A7%A3%20(in%20progress" alt="KL散度构造下限">%20(notes)/KL.png)</p>
+<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/KL.png" alt="KL散度构造下限"></p>
 <p>同时可以看出来刚才的(2)步的让Jensen不等式取等号的操作也是在让KL散度为零构造下限，也就是让<code>$q(\mathbf{z})= P(\mathbf{z}|\mathbf{x},\mathbf{\theta})$</code>取q分布的期望（Expectation）当做隐函数分布的估算。</p>
 <p>然后利用q分布再对对数似然函数最大化（Maximization）更新<code>$\theta$</code>。</p>
-<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/EM%20Algorithm%20%E4%BB%8E%E7%9B%B4%E8%A7%82%E5%88%B0%E6%95%B0%E5%AD%A6%E7%90%86%E8%A7%A3%20(in%20progress" alt="KL散度构造下限gif">%20(notes)/kl.gif)</p>
+<p><img src="/2018/09/02/EM Algorithm 从直观到数学理解/kl.gif" alt="KL散度构造下限gif"></p>
 <p>这个也是所谓的九层境界里面的第二层。（<a href="https://mp.weixin.qq.com/s/NbM4sY93kaG5qshzgZzZIQ" target="_blank" rel="noopener">EM算法的九层境界：Hinton和Jordan理解的EM算法</a>）</p>
 <h1 id="0x40-GMM混合高斯分布的例子"><a href="#0x40-GMM混合高斯分布的例子" class="headerlink" title="0x40 GMM混合高斯分布的例子"></a>0x40 GMM混合高斯分布的例子</h1><p>有空再更新</p>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>PRML</p>
