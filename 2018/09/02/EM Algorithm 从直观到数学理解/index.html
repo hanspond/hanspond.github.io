@@ -243,7 +243,7 @@
 
     
         <meta property="article:published_time" content="Sun Sep 02 2018 12:00:00 GMT+0900">
-        <meta property="article:modified_time" content="Sun Sep 02 2018 22:44:40 GMT+0900">
+        <meta property="article:modified_time" content="Sun Sep 02 2018 22:48:47 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -266,7 +266,7 @@
     "mainEntityOfPage": "https://hanspond.github.io/2018/09/02/EM Algorithm 从直观到数学理解/index.html",
     "headline": "EM Algorithm 从直观到数学理解",
     "datePublished": "Sun Sep 02 2018 12:00:00 GMT+0900",
-    "dateModified": "Sun Sep 02 2018 22:44:40 GMT+0900",
+    "dateModified": "Sun Sep 02 2018 22:48:47 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "$H_P?",
@@ -527,7 +527,7 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h1 id="0x00-引言"><a href="#0x00-引言" class="headerlink" title="0x00 引言"></a>0x00 引言</h1><p>EM算法是什么？什么是E（Epectation）？什么是M（Maximization）？什么又是公式里面出现的Q函数？这些公式都是怎么推导的？Nature抛硬币的那个图怎么就看不懂嘞？为什么看了那么多文章之后还是不懂？公式的符号怎么又不一样呢？谁谁还说有九层塔？Emmm…interesting</p>
-<p><img src="https://hanspond.github.io/2018/09/02/EM%20Algorithm%20从直观到数学理解/v2-a5b47206d802b392e0e72a23c6b7bb95_hd.jpg" alt=""></p>
+<p><img src="https://hanspond.github.io/2018/09/02/EM%20Algorithm%20从直观到数学理解/WtYc-hinpmnq5181797.gif" alt=""></p>
 <p>下面，让我们走进科学。</p>
 <h1 id="0x10-直观理解"><a href="#0x10-直观理解" class="headerlink" title="0x10 直观理解"></a>0x10 直观理解</h1><p>现在有一个随机变量数据集<script type="math/tex">\mathbf{D}</script>，假设我们知道这个随机变量<script type="math/tex">\mathbf{X}</script>服从某种分布(一般是高斯正规分布），我们的目的是想知道这个分布的参数<script type="math/tex">\mathbf{\theta}</script>，可是随机变量<script type="math/tex">\mathbf{X}</script>里面包含不可知的参数（也就是隐变量<script type="math/tex">\mathbf{z}</script>）的时候，EM算法是在一边猜隐变量<script type="math/tex">\mathbf{z}</script>一边更新<script type="math/tex">\mathbf{\theta}</script>：</p>
 <ol>
@@ -540,7 +540,7 @@
 <h1 id="0x20-抛硬币的例子"><a href="#0x20-抛硬币的例子" class="headerlink" title="0x20 抛硬币的例子"></a>0x20 抛硬币的例子</h1><blockquote>
 <p>Do, C. B., &amp; Batzoglou, S. (2008). What is the expectation maximization algorithm? Nature Biotechnology, 26(8), 897–899. <a href="https://doi.org/10.1038/nbt1406" target="_blank" rel="noopener">https://doi.org/10.1038/nbt1406</a>  </p>
 </blockquote>
-<p><img src="EM%20Algorithm%20%E4%BB%8E%E7%9B%B4%E8%A7%82%E5%88%B0%E6%95%B0%E5%AD%A6%E7%90%86%E8%A7%A3/v2-a5b47206d802b392e0e72a23c6b7bb95_hd.jpg" alt="硬币图"></p>
+<p><img src="https://hanspond.github.io/2018/09/02/EM%20Algorithm%20从直观到数学理解/v2-a5b47206d802b392e0e72a23c6b7bb95_hd.jpg" alt="硬币图"></p>
 <p>上面这篇著名的EM入门论文里面有一张很好的图例，利用抛硬币来说明EM，可是对于某些初学者来讲缺乏解读还是有点难理解思路。</p>
 <p>下面尝试拆解一下分步骤解读</p>
 <h3 id="0x21-问题定义"><a href="#0x21-问题定义" class="headerlink" title="0x21 问题定义"></a>0x21 问题定义</h3><h6 id="已知："><a href="#已知：" class="headerlink" title="已知："></a>已知：</h6><ul>
@@ -570,7 +570,7 @@
 <p>（硬币的情况来说正常用二分法，<script type="math/tex">z_n=  \begin{cases} 1, if  \ coin \ A \\ 0, if   \ coin \ B \end{cases}</script>，不过下面使用<script type="math/tex">z_n</script>代表数据重新分割的时候属于A的比例。）</p>
 <h6 id="那怎么办？"><a href="#那怎么办？" class="headerlink" title="那怎么办？"></a>那怎么办？</h6><p>想一下就发现，一组抛多次，不同硬币的抛出不同结果的概率是相当不同的。比如说：</p>
 <ul>
-<li><script type="math/tex; mode=display">\theta=0.3$$的硬币抛出4H6T的概率是$$P(4H6T|\theta=0.3)=\binom{10}{4}0.3^4(1-0.3)^6=\binom{10}{4}0.0009529569</script></li>
+<li>一个<script type="math/tex">\theta=0.3</script>的硬币抛出4H6T的概率是<script type="math/tex">P(4H6T|\theta=0.3)=\binom{10}{4}0.3^4(1-0.3)^6=\binom{10}{4}0.0009529569</script></li>
 <li>而<script type="math/tex">\theta=0.4</script>的硬币抛出4H6T的概率是<script type="math/tex">P(4H6T|\theta=0.4)=\binom{10}{4}0.4^4(1-0.4)^6=\binom{10}{4}0.0011943936</script></li>
 </ul>
 <p>也就是说，倒过来说，看到4H6T的结果的时候，这个硬币本身朝上的概率更有可能是<script type="math/tex">\theta=0.4</script>而不是<script type="math/tex">\theta=0.3</script>。</p>
