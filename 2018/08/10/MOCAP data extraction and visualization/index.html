@@ -625,7 +625,7 @@
 <li>In the ASF file the order is given left to right so that an order of “XYZ” is: vM = vXYZ</li>
 <li>.amc file records the axis data of each bone frame by frame</li>
 </ul>
-<h3 id="amc-for-motion"><a href="#amc-for-motion" class="headerlink" title=".amc for motion"></a>.amc for motion</h3><pre><code class="python">
+<h3 id="amc-for-motion"><a href="#amc-for-motion" class="headerlink" title=".amc for motion"></a>.amc for motion</h3><pre><code class="lang-python">
 #!OML:ASF H:\Terrain\Patient Classification 1\PLAYGROUND\JustinFriday\JustinFriday.ASF
 :FULLY-SPECIFIED
 :DEGREES
@@ -672,7 +672,7 @@ lowerback 2.29991 -0.349181 1.09181
 <h3 id="Other-useful-references"><a href="#Other-useful-references" class="headerlink" title="Other useful references"></a>Other useful references</h3><p><a href="http://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/ASF-AMC.html" target="_blank" rel="noopener">http://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/ASF-AMC.html</a><br><a href="http://graphics.cs.cmu.edu/nsp/course/15-464/Fall05/assignments/StartupCodeDescription.html" target="_blank" rel="noopener">http://graphics.cs.cmu.edu/nsp/course/15-464/Fall05/assignments/StartupCodeDescription.html</a><br><a href="http://web.cse.ohio-state.edu/~parent.1/classes/888/Mocap/index.html" target="_blank" rel="noopener">http://web.cse.ohio-state.edu/~parent.1/classes/888/Mocap/index.html</a><br><a href="http://www.darwin3d.com/gamedev/articles/col0198.pdf" target="_blank" rel="noopener">http://www.darwin3d.com/gamedev/articles/col0198.pdf</a><br><a href="http://mukai-lab.org/content/MotionCaptureDataFile.pdf" target="_blank" rel="noopener">http://mukai-lab.org/content/MotionCaptureDataFile.pdf</a><br><a href="https://blog.csdn.net/zb1165048017/article/details/49358089" target="_blank" rel="noopener">https://blog.csdn.net/zb1165048017/article/details/49358089</a><br><a href="https://blog.csdn.net/zb1165048017/article/details/49339493" target="_blank" rel="noopener">https://blog.csdn.net/zb1165048017/article/details/49339493</a><br><a href="http://studentnet.cs.manchester.ac.uk/resources/library/3rd-year-projects/2016/jiayun.wang.pdf" target="_blank" rel="noopener">http://studentnet.cs.manchester.ac.uk/resources/library/3rd-year-projects/2016/jiayun.wang.pdf</a></p>
 <h2 id="MOCAP-TOOLBOX"><a href="#MOCAP-TOOLBOX" class="headerlink" title="MOCAP TOOLBOX"></a>MOCAP TOOLBOX</h2><p>There are several existing projects available in Github for processing and visualization of the CMU MOCAP .asf/.amc file.</p>
 <p>Here is one used by most researchers:<br><a href="https://github.com/lawrennd/mocap" target="_blank" rel="noopener">https://github.com/lawrennd/mocap</a></p>
-<pre><code class="matlab">&gt;&gt; % Read .asf skeleton file
+<pre><code class="lang-matlab">&gt;&gt; % Read .asf skeleton file
 &gt;&gt; skel_86 = acclaimReadSkel(&#39;examples/86.asf&#39;);
 &gt;&gt; % Read .amc channels file
 &gt;&gt; [channels_86_10, skel_86] = acclaimLoadChannels(&#39;examples/86_10.amc&#39;, skel);
@@ -681,9 +681,9 @@ lowerback 2.29991 -0.349181 1.09181
 </code></pre>
 <p>Be aware that this matlab code was written more than a decade ago and it uses an obselete function of <strong>getline</strong> which will cause problems if run in a newer version of matlab. The solution is to switch to another function of <strong>fgetl</strong>.</p>
 <p>Modified version: <a href="https://github.com/hanspond/mocap" target="_blank" rel="noopener">https://github.com/hanspond/mocap</a></p>
-<p>Visualization of subject 02 motion 02<br><img src="/2018/08/10/MOCAP data extraction and visualization/skel.gif" alt=""></p>
+<p>Visualization of subject 02 motion 02<br><img src="MOCAP%20data%20extraction%20and%20visualization/skel.gif" alt=""></p>
 <p>Visualization of subject 02 motion 02 with a ellipsoidal model</p>
-<p><img src="/2018/08/10/MOCAP data extraction and visualization/ellipsoid.gif" alt=""></p>
+<p><img src="MOCAP%20data%20extraction%20and%20visualization/ellipsoid.gif" alt=""></p>
 <p>Others tool:</p>
 <p><a href="https://github.com/CalciferZh/AMCParser" target="_blank" rel="noopener">https://github.com/CalciferZh/AMCParser</a><br><a href="https://github.com/CalciferZh/SMPL" target="_blank" rel="noopener">https://github.com/CalciferZh/SMPL</a><br><a href="https://github.com/surenkum/c3d_to_xyz" target="_blank" rel="noopener">https://github.com/surenkum/c3d_to_xyz</a><br><a href="https://github.com/CalciferZh/CMU-MoCap-Washer" target="_blank" rel="noopener">https://github.com/CalciferZh/CMU-MoCap-Washer</a></p>
 <p>A list to other MOCAP databases:<br><a href="http://www.jeroenvanboxtel.com/MocapDatabases.html" target="_blank" rel="noopener">http://www.jeroenvanboxtel.com/MocapDatabases.html</a></p>
@@ -1193,24 +1193,22 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
 </script>
 
                 </main>
-            </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
 </script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
-        </body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
     
 </html>
