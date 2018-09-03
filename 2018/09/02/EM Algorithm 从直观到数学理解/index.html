@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Programming,Python,Tech,Algorithm">
+    <meta name="keywords" content=",Python,Programming,Tech,Algorithm">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -239,7 +239,7 @@
     <meta property="og:title" content="EM Algorithm 从直观到数学理解 | H_P-&#39;s BLOG">
     <meta property="og:image" content="/img/IMG_1515.jpg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Programming"> <meta property="og:article:tag" content="Python"> <meta property="og:article:tag" content="Tech"> <meta property="og:article:tag" content="Algorithm"> 
+    <meta property="og:article:tag" content="Python"> <meta property="og:article:tag" content="Programming"> <meta property="og:article:tag" content="Tech"> <meta property="og:article:tag" content="Algorithm"> 
 
     
         <meta property="article:published_time" content="Sun Sep 02 2018 12:00:00 GMT+0900">
@@ -284,7 +284,7 @@
             "url": "/img/IMG_1515.jpg"
         }
     },
-    "keywords": ",Programming,Python,Tech,Algorithm",
+    "keywords": ",Python,Programming,Tech,Algorithm",
     "description": "",
 }
 </script>
@@ -1195,7 +1195,22 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
 </script>
 
                 </main>
-            </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-        </body>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
     
 </html>
