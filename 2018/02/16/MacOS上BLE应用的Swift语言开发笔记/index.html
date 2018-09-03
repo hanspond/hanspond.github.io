@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",MacOS,Programming,Swift,App Development,BLE,Bluetooth">
+    <meta name="keywords" content=",MacOS,Programming,BLE,Swift,Bluetooth,App Development">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -239,7 +239,7 @@
     <meta property="og:title" content="MacOS上 Bluetooth Low Energy/BLE 应用的Swift语言开发笔记 | H_P-&#39;s BLOG">
     <meta property="og:image" content="/img/IMG_1515.jpg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="MacOS"> <meta property="og:article:tag" content="Programming"> <meta property="og:article:tag" content="Swift"> <meta property="og:article:tag" content="App Development"> <meta property="og:article:tag" content="BLE"> <meta property="og:article:tag" content="Bluetooth"> 
+    <meta property="og:article:tag" content="MacOS"> <meta property="og:article:tag" content="Programming"> <meta property="og:article:tag" content="BLE"> <meta property="og:article:tag" content="Swift"> <meta property="og:article:tag" content="Bluetooth"> <meta property="og:article:tag" content="App Development"> 
 
     
         <meta property="article:published_time" content="Fri Feb 16 2018 12:00:00 GMT+0900">
@@ -284,7 +284,7 @@
             "url": "/img/IMG_1515.jpg"
         }
     },
-    "keywords": ",MacOS,Programming,Swift,App Development,BLE,Bluetooth",
+    "keywords": ",MacOS,Programming,BLE,Swift,Bluetooth,App Development",
     "description": "",
 }
 </script>
@@ -532,11 +532,11 @@
 <ol>
 <li>Bluetooth Basic Rate_Enhanced Data Rate 也就是 BR_EDR</li>
 <li>Bluetooth Low Energy 也就是 BLE </li>
-<li>Bluetooth Smart 和 Smart Ready 大致是一种企图融合上面两种制式的过渡技术<br><img src="/2018/02/16/MacOS上BLE应用的Swift语言开发笔记/995903.png" alt="Fig 1"></li>
+<li>Bluetooth Smart 和 Smart Ready 大致是一种企图融合上面两种制式的过渡技术<br><img src="995903.png" alt="Fig 1"></li>
 <li>Bluetooth 5.0 是最新的规格。买了chip有空再弄。</li>
 </ol>
 <h2 id="3-BLE蓝牙协议和实际利用"><a href="#3-BLE蓝牙协议和实际利用" class="headerlink" title="3. BLE蓝牙协议和实际利用"></a>3. BLE蓝牙协议和实际利用</h2><h3 id="3-1-具体协议内容和连接方式"><a href="#3-1-具体协议内容和连接方式" class="headerlink" title="3.1 具体协议内容和连接方式"></a>3.1 具体协议内容和连接方式</h3><p>详情可以自行百度，或者看原文<br>协议和栈方面比较详细的介绍有：<br><a href="http://www.wowotech.net/bluetooth/bt_overview.html" target="_blank" rel="noopener">蓝牙协议分析(1)_基本概念</a><br><a href="http://www.wowotech.net/bluetooth/bt_protocol_arch.html" target="_blank" rel="noopener">蓝牙协议分析(2)_协议架构</a><br><a href="http://www.wowotech.net/bluetooth/ble_stack_overview.html" target="_blank" rel="noopener">蓝牙协议分析(3)_蓝牙低功耗(BLE)协议栈介绍</a><br>还有这个：<a href="http://blog.csdn.net/qq_21842557/article/details/50768283" target="_blank" rel="noopener">BLE低功耗蓝牙介绍 - CSDN博客</a></p>
-<p>当然了解具体协议和内容是非常非常重要的，不过对于日常小型应用来说，我们知道怎么发送怎么接受信息就可以了。<br>重点就是理解下图的Services和Characteristics<br><img src="/2018/02/16/MacOS上BLE应用的Swift语言开发笔记/7EBM_V0saoBZwk5j-YhWJQ.png" alt="Fig 2"></p>
+<p>当然了解具体协议和内容是非常非常重要的，不过对于日常小型应用来说，我们知道怎么发送怎么接受信息就可以了。<br>重点就是理解下图的Services和Characteristics<br><img src="7EBM_V0saoBZwk5j-YhWJQ.png" alt="Fig 2"></p>
 <p>举个例子，BLE栈就像一个超市，里面有各个部署区域（Services），比方说：</p>
 <ul>
 <li>蔬果区（HIDS/HID Service 人机交互服务）</li>
@@ -550,15 +550,15 @@
 </ul>
 <p>例如，你想买牛奶巧克力，那就先要跑去零食区（UUID=0x180D），然后找到巧克力货架（UUID=0x2A37），et Voila!</p>
 <p>这个Services和Characteristics都是用UUID来标记，都是约定俗成的，只能跑去看GATT里面的定义。<br>也可以自行生成UUID：<a href="https://www.uuidgenerator.net" target="_blank" rel="noopener">Online UUID Generator</a><br>-（当然有人会问那你想搞个没有定义或者不符合定义的数据的通讯怎么办呢？有个做法是挂羊头卖狗肉，当然Central和Peripheral两头设定都要对得上。）-</p>
-<h3 id="3-2-Central和Peripheral"><a href="#3-2-Central和Peripheral" class="headerlink" title="3.2 Central和Peripheral"></a>3.2 Central和Peripheral</h3><p>一般来说Central是读取信息的一方，Peripheral是提供信息的一方现在的情况的话电脑是Central了。<br><img src="/2018/02/16/MacOS上BLE应用的Swift语言开发笔记/CBDevices1_2x.png" alt="Fig 3"></p>
-<h3 id="3-3-比较有用的测试道具"><a href="#3-3-比较有用的测试道具" class="headerlink" title="3.3 比较有用的测试道具"></a>3.3 比较有用的测试道具</h3><p>Mac上面有两个道具比较有用：LightBlue和PacketLogger<br><img src="/2018/02/16/MacOS上BLE应用的Swift语言开发笔记/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f343139342f39613833633663392d323032332d316434652d363438622d6666333866313939613732382e706e67.png" alt="Fig 4"><br><img src="/2018/02/16/MacOS上BLE应用的Swift语言开发笔记/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f343139342f30323735323234632d376238652d626432622d623333662d3435306230326639666634642e706e67.png" alt="Fig 5"></p>
+<h3 id="3-2-Central和Peripheral"><a href="#3-2-Central和Peripheral" class="headerlink" title="3.2 Central和Peripheral"></a>3.2 Central和Peripheral</h3><p>一般来说Central是读取信息的一方，Peripheral是提供信息的一方现在的情况的话电脑是Central了。<br><img src="CBDevices1_2x.png" alt="Fig 3"></p>
+<h3 id="3-3-比较有用的测试道具"><a href="#3-3-比较有用的测试道具" class="headerlink" title="3.3 比较有用的测试道具"></a>3.3 比较有用的测试道具</h3><p>Mac上面有两个道具比较有用：LightBlue和PacketLogger<br><img src="68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f343139342f39613833633663392d323032332d316434652d363438622d6666333866313939613732382e706e67.png" alt="Fig 4"><br><img src="68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f343139342f30323735323234632d376238652d626432622d623333662d3435306230326639666634642e706e67.png" alt="Fig 5"></p>
 <p>iOS上面有：LightBlue，nRF Connect，nRF Toolbox</p>
 <h2 id="4-MacOS-BLE-App-Swift编程的注意点"><a href="#4-MacOS-BLE-App-Swift编程的注意点" class="headerlink" title="4. MacOS BLE App Swift编程的注意点"></a>4. MacOS BLE App Swift编程的注意点</h2><p> 其实iOS的BLE程序的代码差不多改改UI组件就可以在MacOS上面使用，但是在Xcode里面编程调试MacOS Swift代码需要注意几个不同之处</p>
 <h3 id="4-1-XPC-connection-invalid"><a href="#4-1-XPC-connection-invalid" class="headerlink" title="4.1 XPC connection invalid"></a>4.1 XPC connection invalid</h3><ol>
-<li>在MacOS的Xcode里面，打开沙盒（App Sandbox）里面的蓝牙<br>路径：target -&gt; Capabilities -&gt; App Sandbox -&gt; Hardware -&gt; Bluetooth<br><img src="/2018/02/16/MacOS上BLE应用的Swift语言开发笔记/AB70987E-ABC4-474D-A555-B065F1F953F3.jpg" alt="Fig 6"></li>
+<li>在MacOS的Xcode里面，打开沙盒（App Sandbox）里面的蓝牙<br>路径：target -&gt; Capabilities -&gt; App Sandbox -&gt; Hardware -&gt; Bluetooth<br><img src="AB70987E-ABC4-474D-A555-B065F1F953F3.jpg" alt="Fig 6"></li>
 </ol>
 <ol>
-<li>info.plist 里面追加 Privacy - Bluetooth Peripheral Usage Description，Value随意<br><img src="/2018/02/16/MacOS上BLE应用的Swift语言开发笔记/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f36373135332f34346263323431312d386330362d393462322d353837372d3936643239336565353336652e706e67.png" alt="Fig 7"></li>
+<li>info.plist 里面追加 Privacy - Bluetooth Peripheral Usage Description，Value随意<br><img src="68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f36373135332f34346263323431312d386330362d393462322d353837372d3936643239336565353336652e706e67.png" alt="Fig 7"></li>
 </ol>
 <p>好了，准备完成！现在可以开始写代码了。<br>使用的swift版本是4, MacOS是High Sierra 10.13.3</p>
 <hr>
