@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Programming,Python,Tech,Algorithm">
+    <meta name="keywords" content=",Python,Programming,Tech,Algorithm">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -239,11 +239,11 @@
     <meta property="og:title" content="EM Algorithm 从直观到数学理解 | H_P-&#39;s BLOG">
     <meta property="og:image" content="/img/IMG_1515.jpg">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Programming"> <meta property="og:article:tag" content="Python"> <meta property="og:article:tag" content="Tech"> <meta property="og:article:tag" content="Algorithm"> 
+    <meta property="og:article:tag" content="Python"> <meta property="og:article:tag" content="Programming"> <meta property="og:article:tag" content="Tech"> <meta property="og:article:tag" content="Algorithm"> 
 
     
         <meta property="article:published_time" content="Sun Sep 02 2018 12:00:00 GMT+0900">
-        <meta property="article:modified_time" content="Mon Sep 03 2018 13:16:13 GMT+0900">
+        <meta property="article:modified_time" content="Mon Sep 03 2018 13:25:20 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -266,7 +266,7 @@
     "mainEntityOfPage": "https://hanspond.github.io/2018/09/02/EM Algorithm 从直观到数学理解/index.html",
     "headline": "EM Algorithm 从直观到数学理解",
     "datePublished": "Sun Sep 02 2018 12:00:00 GMT+0900",
-    "dateModified": "Mon Sep 03 2018 13:16:13 GMT+0900",
+    "dateModified": "Mon Sep 03 2018 13:25:20 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "$H_P?",
@@ -284,7 +284,7 @@
             "url": "/img/IMG_1515.jpg"
         }
     },
-    "keywords": ",Programming,Python,Tech,Algorithm",
+    "keywords": ",Python,Programming,Tech,Algorithm",
     "description": "",
 }
 </script>
@@ -526,7 +526,16 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="0x00-引言"><a href="#0x00-引言" class="headerlink" title="0x00 引言"></a>0x00 引言</h1><p>EM算法是什么？什么是E（Epectation）？什么是M（Maximization）？什么又是公式里面出现的Q函数？这些公式都是怎么推导的？Nature抛硬币的那个图怎么就看不懂嘞？为什么看了那么多文章之后还是不懂？公式的符号怎么又不一样呢？谁谁还说有九层塔？Emmm…interesting</p>
+        <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h1 id="0x00-引言"><a href="#0x00-引言" class="headerlink" title="0x00 引言"></a>0x00 引言</h1><p>EM算法是什么？什么是E（Epectation）？什么是M（Maximization）？什么又是公式里面出现的Q函数？这些公式都是怎么推导的？Nature抛硬币的那个图怎么就看不懂嘞？为什么看了那么多文章之后还是不懂？公式的符号怎么又不一样呢？谁谁还说有九层塔？Emmm…interesting</p>
 <p><img src="https://hanspond.github.io/2018/09/02/EM%20Algorithm%20从直观到数学理解/WtYc-hinpmnq5181797.gif" alt=""></p>
 <p>下面，让我们走进科学。</p>
 <h1 id="0x10-直观理解"><a href="#0x10-直观理解" class="headerlink" title="0x10 直观理解"></a>0x10 直观理解</h1><p>现在有一个随机变量数据集$\mathbf{D}$，假设我们知道这个随机变量$\mathbf{X}$服从某种分布(一般是高斯正规分布），我们的目的是想知道这个分布的参数$\mathbf{\theta}$，可是随机变量$\mathbf{X}$里面包含不可知的参数（也就是隐变量$\mathbf{z}$）的时候，EM算法是在一边猜隐变量$\mathbf{z}$一边更新$\mathbf{\theta}$：</p>
