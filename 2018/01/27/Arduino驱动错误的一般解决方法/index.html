@@ -529,7 +529,7 @@
         <p>Arduino系列和衍生版种类特别多，每个人的电脑配置也不一样。结果是经常板子到家之后，插上电脑发现无法识别。鉴于开发板的性质，退换申诉困难，客服又一般采取不理不睬的态度没有技术支持。</p>
 <p>又能怎么办？只能靠自己呗。</p>
 <h1 id="先排除其他原因"><a href="#先排除其他原因" class="headerlink" title="先排除其他原因"></a>先排除其他原因</h1><p>板子连接电脑没反应，首先打开设备管理器大概是下面这个样子，出现Unknown Device</p>
-<p><img src="1.PNG" alt="Fig 1"></p>
+<p><img src="/2018/01/27/Arduino驱动错误的一般解决方法/1.PNG" alt="Fig 1"></p>
 <p>这时候一般操作是：</p>
 <ol>
 <li>排除特殊芯片，例如CH340，CP210等芯片，看一下板子是否装了这种芯片，百度搜索下载各自的驱动即可。                       </li>
@@ -538,7 +538,7 @@
 <li>可以尝试手动选择驱动安装的inf文件。Unknown Device右键选择update driver，出来的界面选择Browse my computer for driver software，下一步的页面点击let me pick from a list of available drivers on my computer，下一步的页面双击选择Ports，然后出现的页面点击右下角的硬盘，去到arduino/drivers文件夹里面选择arduino.inf文件，再选择板子的型号，接下来全部下一步即可。</li>
 </ol>
 <h1 id="强行追加驱动"><a href="#强行追加驱动" class="headerlink" title="强行追加驱动"></a>强行追加驱动</h1><p>上面的第4步还是出错（一般是code28）的话，有可能是系统确实缺了某些预设的驱动文件。<br>这个时候打开C:\Windows\INF里面的setupapi.dev.log，拖到最下面，找一下前面带！！！符号的几行字</p>
-<p><img src="2.PNG" alt="Fig 2"></p>
+<p><img src="/2018/01/27/Arduino驱动错误的一般解决方法/2.PNG" alt="Fig 2"></p>
 <p>例如上图的情况，DFROBOT的CurieNano （Arduino 101）的驱动出错情况</p>
 <pre><code>!!!  flq:                     Source Media: SPFQOPERATION_ABORT (C:\WINDOWS\System32\DriverStore\FileRepository\usbser.inf_amd64_827db80716f312be\usbser.sys).  
 !!!  flq:                     Error 2: The system cannot find the file specified.
@@ -701,7 +701,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/08/">August 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/09/">September 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">August 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -719,7 +719,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Computer-Vision/">Computer Vision<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Maker/">Maker<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Maker/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/">Programming<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/HID/">HID<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Computer-Vision/">Computer Vision<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Machine-Learning/">Machine Learning<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Maker/">Maker<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Maker/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/">Programming<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/HID/">HID<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1057,7 +1057,7 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
     
 </html>

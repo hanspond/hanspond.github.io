@@ -529,27 +529,27 @@
         <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>人生如幻，不知怎么的碰（bei）巧（ju）和OFDM对上了。<br>这是一个大坑，很大又绕不过去的坑，不是三言两语能够解释清楚的，目测需要融合贯通理解数学的三角函数，傅里叶，通原的检波，调制，信道特征，信号处理的采样，电子元件特征等等知识才能有个大概了解。详细可以参考专（da）业（bu）书（tou）：L. Hanzo et al., OFDM and MC-CDMA for Broadband Multi-User Communications, Wiley, 2003.</p>
 <p>时间精力有限，先来个直观图解，也好方便以后深入。<br>下文主要参考另一篇很好的入门文章作3D图：<a href="https://blog.csdn.net/madongchunqiu/article/details/18614233" target="_blank" rel="noopener">给”小白”图示讲解OFDM的原理 - CSDN博客</a></p>
 <h2 id="正交检波-Orthogonality"><a href="#正交检波-Orthogonality" class="headerlink" title="正交检波 Orthogonality"></a>正交检波 Orthogonality</h2><p>不同的正弦倍谐波是正交的。意思是不同频率倍数的正弦波积分之后为零。</p>
-<p><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/har1%203.png" alt=""><br><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/har2%203.png" alt=""><br><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/har3%203.png" alt=""></p>
-<p><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/har4%203.png" alt=""></p>
+<p><img src="/2018/06/09/直观图解OFDM原理/har1%203.png" alt=""><br><img src="/2018/06/09/直观图解OFDM原理/har2%203.png" alt=""><br><img src="/2018/06/09/直观图解OFDM原理/har3%203.png" alt=""></p>
+<p><img src="/2018/06/09/直观图解OFDM原理/har4%203.png" alt=""></p>
 <p>如前面三图所示只有频率相同的时候，积分器的结果不为零。频率不同的时候积分在x轴上下面积相同，积分结果是零。<br>另外，sin和cos（也就是90度相位差）的两个信号的积分结果一样是零，所以sin和cos也是正交的。</p>
-<h2 id="谐波的频分复用-Frequency-Division-Multiplexing"><a href="#谐波的频分复用-Frequency-Division-Multiplexing" class="headerlink" title="谐波的频分复用 Frequency Division Multiplexing"></a>谐波的频分复用 Frequency Division Multiplexing</h2><p>了解不同频率的正弦余弦的正交性这一点之后，我们就可以同时利用这个特征同时发送不同频率的正弦余弦波。而在接收器一侧，使用不同频率积分器积分之后，我们是有能力分辨出不同频率谐波。<br><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/harmonics%203.png" alt=""></p>
+<h2 id="谐波的频分复用-Frequency-Division-Multiplexing"><a href="#谐波的频分复用-Frequency-Division-Multiplexing" class="headerlink" title="谐波的频分复用 Frequency Division Multiplexing"></a>谐波的频分复用 Frequency Division Multiplexing</h2><p>了解不同频率的正弦余弦的正交性这一点之后，我们就可以同时利用这个特征同时发送不同频率的正弦余弦波。而在接收器一侧，使用不同频率积分器积分之后，我们是有能力分辨出不同频率谐波。<br><img src="/2018/06/09/直观图解OFDM原理/harmonics%203.png" alt=""></p>
 <p>上图中，1sin1t+0sin2t+2sin3t+0sin4t+1sin5t的信号（10201）同时发送。接收器里面，sin2t和sin4t的积分器输出为零，而sin1t和sin3t的积分器输出不为零，而且sin3t的信号功率大。接收器检测到了（1020），sin5t的信号1检测不到。</p>
 <h2 id="时域和频域"><a href="#时域和频域" class="headerlink" title="时域和频域"></a>时域和频域</h2><p>频域和时域其实画成3D就很好理解了</p>
-<p><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/all_cos%203.gif" alt=""></p>
+<p><img src="/2018/06/09/直观图解OFDM原理/all_cos%203.gif" alt=""></p>
 <p>上图展示了四个余弦波（也叫In phase）谐波，每个波的频谱都是1，所以可以看成是信息（1,1,1,1）。每个波的振幅取值范围是0或者1的话，这四个波就可以传递4bit的信息。也就是每个谐波都是一个ASK。</p>
-<p><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/cos_coded_1%203.gif" alt=""><br><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/cos_coded_2%203.gif" alt=""><br><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/cos_coded_3%203.gif" alt=""></p>
+<p><img src="/2018/06/09/直观图解OFDM原理/cos_coded_1%203.gif" alt=""><br><img src="/2018/06/09/直观图解OFDM原理/cos_coded_2%203.gif" alt=""><br><img src="/2018/06/09/直观图解OFDM原理/cos_coded_3%203.gif" alt=""></p>
 <p>除了振幅，也可以改变相位用来传输数据。这个时候相当于APSK吧。<br>换个角度看频域和时域是不是清楚了？</p>
-<p><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/cos_sin%203.gif" alt=""></p>
+<p><img src="/2018/06/09/直观图解OFDM原理/cos_sin%203.gif" alt=""></p>
 <p>别忘了还可以加入正交的正弦波（也叫Quadrature），四个余弦波（I）和四个正弦波（Q）都可以有不同的频谱，上图的信息是（11,01,10,00）。这不就是QAM了吗？</p>
-<p><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/complex%203.gif" alt=""></p>
-<p>别忘了，其实我们可以用一个复数信号来代替同频率的一个正弦波和一个余弦波的和。也就是欧拉公式丢掉右边部分的i。通信老师会给你说这都是为了方便，用一个复数代替两个三角函数就可以将很多运算公式简约很多了。<br><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/texclip20180609140610%202.png" alt=""></p>
+<p><img src="/2018/06/09/直观图解OFDM原理/complex%203.gif" alt=""></p>
+<p>别忘了，其实我们可以用一个复数信号来代替同频率的一个正弦波和一个余弦波的和。也就是欧拉公式丢掉右边部分的i。通信老师会给你说这都是为了方便，用一个复数代替两个三角函数就可以将很多运算公式简约很多了。<br><img src="/2018/06/09/直观图解OFDM原理/texclip20180609140610%202.png" alt=""></p>
 <p>传递的信息变成了（A1,A2,A3,A4），这里面的每一个symbol的Ak都是复数。</p>
-<p>然后仔细一看在时域的复信号的求和公式<br><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/texclip20180609140523%202.png" alt=""></p>
+<p>然后仔细一看在时域的复信号的求和公式<br><img src="/2018/06/09/直观图解OFDM原理/texclip20180609140523%202.png" alt=""></p>
 <p>这不就是一个傅里叶级数么！（该复习的复习去）<br>然后离散的傅里叶级数不是可以用IDFT/IFFT来计算么！</p>
 <p>由此我们就可以用对复数symbol的数列进行IDFT直接得到时域的发送信号了。</p>
-<h2 id="系统架构"><a href="#系统架构" class="headerlink" title="系统架构"></a>系统架构</h2><p><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/architecture%203.png" alt=""></p>
+<h2 id="系统架构"><a href="#系统架构" class="headerlink" title="系统架构"></a>系统架构</h2><p><img src="/2018/06/09/直观图解OFDM原理/architecture%203.png" alt=""></p>
 <p>动图都了解之后，系统架构就很直白了。<br>以传输11011000为例，首先分成11,01,10,00并列的四个symbol，然后加入pilot（以后有空再谈），对四个复数symbol进行IDFT_IFFT就可以得到时域的实际发送的信号，然后再加入CP_GI，最后转换成数字数据，升到中频/高频后发送。接收器是倒过来的操作。</p>
-<h2 id="采样方面来看"><a href="#采样方面来看" class="headerlink" title="采样方面来看"></a>采样方面来看</h2><p><img src="%E7%9B%B4%E8%A7%82%E5%9B%BE%E8%A7%A3OFDM%E5%8E%9F%E7%90%86/pulse_sampling%203.gif" alt=""></p>
+<h2 id="采样方面来看"><a href="#采样方面来看" class="headerlink" title="采样方面来看"></a>采样方面来看</h2><p><img src="/2018/06/09/直观图解OFDM原理/pulse_sampling%203.gif" alt=""></p>
 <p>采样方面，采样间隔决定了频域上面sinc函数的零点之间间隔。</p>
 <p>看上图第一个和第四个子载波，改变采样频率的话，第一个子载波的频域sinc函数会和其他子载波重叠，改变子载波频率距离的话，第四个子载波的采样数据也会和其他子载波重叠。</p>
 <p>所以，采样间隔和子载波频率间隔两者必须要符合一定规则。这样采样后的频域数据sinc函数的零点会刚好和其他子载波的，频率以及零点重合，也就是说只有这样子载波之间才能不影响，保持正交。</p>
@@ -723,7 +723,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/08/">August 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/09/">September 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">August 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -741,7 +741,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Computer-Vision/">Computer Vision<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Maker/">Maker<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Maker/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/">Programming<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/HID/">HID<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Computer-Vision/">Computer Vision<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Machine-Learning/">Machine Learning<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Maker/">Maker<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Maker/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/">Programming<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/HID/">HID<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programming/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Wireless-Communication/">Wireless Communication<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1079,7 +1079,7 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
     
 </html>
