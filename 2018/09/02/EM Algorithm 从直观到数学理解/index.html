@@ -243,7 +243,7 @@
 
     
         <meta property="article:published_time" content="Sun Sep 02 2018 12:00:00 GMT+0900">
-        <meta property="article:modified_time" content="Mon Sep 03 2018 15:54:09 GMT+0900">
+        <meta property="article:modified_time" content="Mon Sep 03 2018 19:03:36 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -266,7 +266,7 @@
     "mainEntityOfPage": "https://hanspond.github.io/2018/09/02/EM Algorithm 从直观到数学理解/index.html",
     "headline": "EM Algorithm 从直观到数学理解",
     "datePublished": "Sun Sep 02 2018 12:00:00 GMT+0900",
-    "dateModified": "Mon Sep 03 2018 15:54:09 GMT+0900",
+    "dateModified": "Mon Sep 03 2018 19:03:36 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "$H_P?",
@@ -358,7 +358,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x00-引言"><span class="post-toc-number">1.</span> <span class="post-toc-text">0x00 引言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x10-直观理解"><span class="post-toc-number">2.</span> <span class="post-toc-text">0x10 直观理解</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x20-抛硬币的例子"><span class="post-toc-number">3.</span> <span class="post-toc-text">0x20 抛硬币的例子</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x21-问题定义"><span class="post-toc-number">3.0.1.</span> <span class="post-toc-text">0x21 问题定义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#已知："><span class="post-toc-number">3.0.1.0.0.1.</span> <span class="post-toc-text">已知：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#实验："><span class="post-toc-number">3.0.1.0.0.2.</span> <span class="post-toc-text">实验：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#问题："><span class="post-toc-number">3.0.1.0.0.3.</span> <span class="post-toc-text">问题：</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x22-完全信息-vs-包含隐函数的不完全信息"><span class="post-toc-number">3.0.2.</span> <span class="post-toc-text">0x22 完全信息 vs 包含隐函数的不完全信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x23-完全信息下的求解"><span class="post-toc-number">3.0.3.</span> <span class="post-toc-text">0x23 完全信息下的求解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x24-不完全信息下的初级EM求解"><span class="post-toc-number">3.0.4.</span> <span class="post-toc-text">0x24 不完全信息下的初级EM求解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#那怎么办？"><span class="post-toc-number">3.0.4.0.0.1.</span> <span class="post-toc-text">那怎么办？</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#具体步骤"><span class="post-toc-number">3.0.4.0.0.2.</span> <span class="post-toc-text">具体步骤</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x30-EM算法的公式推导"><span class="post-toc-number">4.</span> <span class="post-toc-text">0x30 EM算法的公式推导</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x31-定义"><span class="post-toc-number">4.0.1.</span> <span class="post-toc-text">0x31 定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x32-最大似然估计"><span class="post-toc-number">4.0.2.</span> <span class="post-toc-text">0x32 最大似然估计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x33-意义解读"><span class="post-toc-number">4.0.3.</span> <span class="post-toc-text">0x33 意义解读</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#E步来看"><span class="post-toc-number">4.0.3.0.0.1.</span> <span class="post-toc-text">E步来看,</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#M步来看，"><span class="post-toc-number">4.0.3.0.0.2.</span> <span class="post-toc-text">M步来看，</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#另一个角度来看，"><span class="post-toc-number">4.0.3.0.0.3.</span> <span class="post-toc-text">另一个角度来看，</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x40-GMM混合高斯分布的例子"><span class="post-toc-number">5.</span> <span class="post-toc-text">0x40 GMM混合高斯分布的例子</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#其他"><span class="post-toc-number">6.</span> <span class="post-toc-text">其他</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#参考"><span class="post-toc-number">7.</span> <span class="post-toc-text">参考</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#վ-HᴗP-ի"><span class="post-toc-number">8.</span> <span class="post-toc-text">վ HᴗP ի</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x00-引言"><span class="post-toc-number">1.</span> <span class="post-toc-text">0x00 引言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x10-直观理解"><span class="post-toc-number">2.</span> <span class="post-toc-text">0x10 直观理解</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x20-抛硬币的例子"><span class="post-toc-number">3.</span> <span class="post-toc-text">0x20 抛硬币的例子</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x21-问题定义"><span class="post-toc-number">3.0.1.</span> <span class="post-toc-text">0x21 问题定义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#已知："><span class="post-toc-number">3.0.1.0.0.1.</span> <span class="post-toc-text">已知：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#实验："><span class="post-toc-number">3.0.1.0.0.2.</span> <span class="post-toc-text">实验：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#问题："><span class="post-toc-number">3.0.1.0.0.3.</span> <span class="post-toc-text">问题：</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x22-完全信息-vs-包含隐函数的不完全信息"><span class="post-toc-number">3.0.2.</span> <span class="post-toc-text">0x22 完全信息 vs 包含隐函数的不完全信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x23-完全信息下的求解"><span class="post-toc-number">3.0.3.</span> <span class="post-toc-text">0x23 完全信息下的求解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x24-不完全信息下的初级EM求解"><span class="post-toc-number">3.0.4.</span> <span class="post-toc-text">0x24 不完全信息下的初级EM求解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#那怎么办？"><span class="post-toc-number">3.0.4.0.0.1.</span> <span class="post-toc-text">那怎么办？</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#具体步骤"><span class="post-toc-number">3.0.4.0.0.2.</span> <span class="post-toc-text">具体步骤</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x30-EM算法的公式推导"><span class="post-toc-number">4.</span> <span class="post-toc-text">0x30 EM算法的公式推导</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x31-定义"><span class="post-toc-number">4.0.1.</span> <span class="post-toc-text">0x31 定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x32-最大似然估计"><span class="post-toc-number">4.0.2.</span> <span class="post-toc-text">0x32 最大似然估计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0x33-意义解读"><span class="post-toc-number">4.0.3.</span> <span class="post-toc-text">0x33 意义解读</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#E步来看"><span class="post-toc-number">4.0.3.0.0.1.</span> <span class="post-toc-text">E步来看,</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#M步来看，"><span class="post-toc-number">4.0.3.0.0.2.</span> <span class="post-toc-text">M步来看，</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#另一个角度来看，"><span class="post-toc-number">4.0.3.0.0.3.</span> <span class="post-toc-text">另一个角度来看，</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0x40-GMM混合高斯分布的例子"><span class="post-toc-number">5.</span> <span class="post-toc-text">0x40 GMM混合高斯分布的例子</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#其他"><span class="post-toc-number">6.</span> <span class="post-toc-text">其他</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#参考及延伸"><span class="post-toc-number">7.</span> <span class="post-toc-text">参考及延伸</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#վ-HᴗP-ի"><span class="post-toc-number">8.</span> <span class="post-toc-text">վ HᴗP ի</span></a></li></ol>
     </ul>
     
 
@@ -575,7 +575,7 @@
 <p>&nbsp;</p>
 <h3 id="0x24-不完全信息下的初级EM求解"><a href="#0x24-不完全信息下的初级EM求解" class="headerlink" title="0x24 不完全信息下的初级EM求解"></a>0x24 不完全信息下的初级EM求解</h3><p><img src="https://hanspond.github.io/2018/09/02/EM%20Algorithm%20从直观到数学理解/2.PNG" alt="不完全信息"></p>
 <p>不完全信息情况呢？我们根本不知道每一组的结果是属于哪种硬币的，没办法用0x24的方法算。这个时候硬币是否属于A的隐变量<script type="math/tex">z_n</script>是未知的。</p>
-<p>（硬币的情况来说正常用二分法，<script type="math/tex">z_n=  \begin{cases} 1, if  \ coin \ A \\ 0, if   \ coin \ B \end{cases}</script>，不过下面使用<script type="math/tex">z_n</script>代表数据重新分割的时候属于A的比例。）</p>
+<p>（硬币的情况来说正常用二分法，<script type="math/tex">z_n=  \begin{cases} 1, if  \ coin \ A \\ 0, if   \ coin \ B \end{cases}</script>，这个例子使用<script type="math/tex">z_n</script>代表数据重新分割的时候属于A的比例。这一点是这个例子有点让人懵的地方。）</p>
 <p>&nbsp;<br>&nbsp;<br>&nbsp;</p>
 <h6 id="那怎么办？"><a href="#那怎么办？" class="headerlink" title="那怎么办？"></a>那怎么办？</h6><p>想一下就发现，一组抛多次，不同硬币的抛出不同结果的概率是相当不同的。比如说：</p>
 <ul>
@@ -655,26 +655,15 @@ $$Q(\mathbf{\theta},\mathbf{\theta}^{old})=E_{\mathbf{z}|\mathbf{X},\mathbf{\the
 <p>这个也是所谓的九层境界里面的第二层。（<a href="https://mp.weixin.qq.com/s/NbM4sY93kaG5qshzgZzZIQ" target="_blank" rel="noopener">EM算法的九层境界：Hinton和Jordan理解的EM算法</a>）</p>
 <p>&nbsp;</p>
 <h1 id="0x40-GMM混合高斯分布的例子"><a href="#0x40-GMM混合高斯分布的例子" class="headerlink" title="0x40 GMM混合高斯分布的例子"></a>0x40 GMM混合高斯分布的例子</h1><p>有空再更新</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><p>PRML</p>
-</li>
-<li><p><a href="https://www.zhihu.com/question/27976634" target="_blank" rel="noopener">知乎: 怎么通俗易懂地解释EM算法并且举个例子?</a>:彭一洋的回答有概括性的数学公式</p>
-</li>
-<li><p>Do, C. B., &amp; Batzoglou, S. (2008). What is the expectation maximization algorithm? Nature Biotechnology, 26(8), 897–899. <a href="https://doi.org/10.1038/nbt1406" target="_blank" rel="noopener">https://doi.org/10.1038/nbt1406</a></p>
-</li>
-<li><p><a href="https://ibug.doc.ic.ac.uk/media/uploads/documents/expectation_maximization-1.pdf" target="_blank" rel="noopener">https://ibug.doc.ic.ac.uk/media/uploads/documents/expectation_maximization-1.pdf</a></p>
-</li>
-<li><p><a href="https://www.jianshu.com/p/1121509ac1dc" target="_blank" rel="noopener">如何感性地理解EM算法？（抛硬币的详解）</a></p>
-</li>
-<li><p><a href="https://qiita.com/kenmatsu4/items/59ea3e5dfa3d4c161efb" target="_blank" rel="noopener">EMアルゴリズム徹底解説</a></p>
-</li>
-<li><p><a href="https://mp.weixin.qq.com/s/NbM4sY93kaG5qshzgZzZIQ" target="_blank" rel="noopener">EM算法的九层境界：​Hinton和Jordan理解的EM算法</a></p>
-</li>
-<li><p><a href="https://mp.weixin.qq.com/s/NayLO3UMUXNcmDJlVx9ckg" target="_blank" rel="noopener">机器学习系列-强填EM算法在理论与工程之间的鸿沟（上）</a></p>
-</li>
-<li><p><a href="https://mp.weixin.qq.com/s/xrc12-ooUeAc02BVIZmnaA" target="_blank" rel="noopener">机器学习系列-强填EM算法在理论与工程之间的鸿沟（下）</a></p>
-</li>
-</ul>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h1 id="参考及延伸"><a href="#参考及延伸" class="headerlink" title="参考及延伸"></a>参考及延伸</h1><p>[1] PRML</p>
+<p>[2] <a href="https://www.zhihu.com/question/27976634" target="_blank" rel="noopener">知乎: 怎么通俗易懂地解释EM算法并且举个例子?</a>:彭一洋的回答有概括性的数学公式</p>
+<p>[3] Do, C. B., &amp; Batzoglou, S. (2008). What is the expectation maximization algorithm? Nature Biotechnology, 26(8), 897–899. <a href="https://doi.org/10.1038/nbt1406" target="_blank" rel="noopener">https://doi.org/10.1038/nbt1406</a></p>
+<p>[4] <a href="https://ibug.doc.ic.ac.uk/media/uploads/documents/expectation_maximization-1.pdf" target="_blank" rel="noopener">ICL Tutorial on EM</a></p>
+<p>[5] <a href="https://www.jianshu.com/p/1121509ac1dc" target="_blank" rel="noopener">如何感性地理解EM算法？（抛硬币的详解）</a></p>
+<p>[6] <a href="https://qiita.com/kenmatsu4/items/59ea3e5dfa3d4c161efb" target="_blank" rel="noopener">EMアルゴリズム徹底解説</a></p>
+<p>[7] <a href="https://mp.weixin.qq.com/s/NbM4sY93kaG5qshzgZzZIQ" target="_blank" rel="noopener">EM算法的九层境界：​Hinton和Jordan理解的EM算法</a></p>
+<p>[8] <a href="https://mp.weixin.qq.com/s/NayLO3UMUXNcmDJlVx9ckg" target="_blank" rel="noopener">机器学习系列-强填EM算法在理论与工程之间的鸿沟（上）</a></p>
+<p>[9] <a href="https://mp.weixin.qq.com/s/xrc12-ooUeAc02BVIZmnaA" target="_blank" rel="noopener">机器学习系列-强填EM算法在理论与工程之间的鸿沟（下）</a></p>
 <h1 id="վ-HᴗP-ի"><a href="#վ-HᴗP-ի" class="headerlink" title="վ HᴗP ի"></a>վ HᴗP ի</h1>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -733,6 +722,14 @@ $$Q(\mathbf{\theta},\mathbf{\theta}^{old})=E_{\mathbf{z}|\mathbf{X},\mathbf{\the
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2018/09/18/短时傅里叶变换（STFT）和连续小波分析（CWT）/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
     
 
     <!-- Section Spacer -->
@@ -832,7 +829,7 @@ $$Q(\mathbf{\theta},\mathbf{\theta}^{old})=E_{\mathbf{z}|\mathbf{X},\mathbf{\the
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/09/">September 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">August 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/09/">September 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">August 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
