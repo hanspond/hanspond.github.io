@@ -243,7 +243,7 @@
 
     
         <meta property="article:published_time" content="Tue Nov 27 2018 12:00:00 GMT+0900">
-        <meta property="article:modified_time" content="Tue Nov 27 2018 14:48:19 GMT+0900">
+        <meta property="article:modified_time" content="Tue Nov 27 2018 19:12:57 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -266,7 +266,7 @@
     "mainEntityOfPage": "https://hanspond.github.io/2018/11/27/简单网格细分 1to4 Mesh Subdivision/index.html",
     "headline": "简单网格细分 1to4 Mesh Subdivision",
     "datePublished": "Tue Nov 27 2018 12:00:00 GMT+0900",
-    "dateModified": "Tue Nov 27 2018 14:48:19 GMT+0900",
+    "dateModified": "Tue Nov 27 2018 19:12:57 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "$H_P?",
@@ -583,7 +583,8 @@ end
 </code></pre>
 <p>效果如图，细分后没有改变原来形状和法线。</p>
 <p><img src="https://hanspond.github.io/2018/11/27/简单网格细分%201to4%20Mesh%20Subdivision/comp1.png" alt="comp1"><br><img src="https://hanspond.github.io/2018/11/27/简单网格细分%201to4%20Mesh%20Subdivision/comp2.png" alt="comp2"></p>
-<h1 id="0x04-递归细分"><a href="#0x04-递归细分" class="headerlink" title="0x04 递归细分"></a>0x04 递归细分</h1><p>如果输入模型的mesh是不规则的话，则需要不停寻找过大的mesh并进行细分，这时候使用递归算法效率高些。</p>
+<h1 id="0x04-递归细分"><a href="#0x04-递归细分" class="headerlink" title="0x04 递归细分"></a>0x04 递归细分</h1><p>一般情况下，输入模型的各个mesh的大小是不规则的话，则需要不停寻找过大的mesh并进行细分，这时候使用递归算法效率高些。</p>
+<p><img src="https://hanspond.github.io/2018/11/27/简单网格细分%201to4%20Mesh%20Subdivision/SubD2.png" alt="SubD2"><br><img src="https://hanspond.github.io/2018/11/27/简单网格细分%201to4%20Mesh%20Subdivision/SubDRe.png" alt="SubDRe"></p>
 <h1 id="0x05-参考-amp-其他"><a href="#0x05-参考-amp-其他" class="headerlink" title="0x05 参考&amp;其他"></a>0x05 参考&amp;其他</h1><p><a href="http://holmes3d.net/graphics/subdivision/" target="_blank" rel="noopener">A Quick Introduction to Subdivision Surfaces</a></p>
 <p><a href="http://people.sc.fsu.edu/~jburkardt/m_src/stla_io/stla_io.html" target="_blank" rel="noopener">STLA_IO Read and Write Routines  ASCII STL 3D Graphics Files</a></p>
 <p><a href="https://blog.csdn.net/lafengxiaoyu/article/details/63278451" target="_blank" rel="noopener">MATLAB将数据写入obj文件</a></p>
